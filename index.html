@@ -15,135 +15,280 @@
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <style>
       * {
-        color: #29f3c3
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        width: 90vw;
+        margin: 0 auto;
+        box-shadow: 0px 0px 14px #818181;
+        -webkit-box-shadow: -3px 0px 14px #818181;
+        -moz-box-shadow: -3px 0px 14px #818181;
+      }
+
+      .triangle {
+        width: 0;
+        height: 0;
+        border-top: 0px solid transparent;
+        border-bottom: 300px solid transparent;
+        border-left: 90vw solid #095877;
+        position: absolute;
+      }
+
+      header .divName {
+        width: 80vw;
+        padding: 20px 0 0 50px;
+        position: relative;
+      }
+
+      header .divName .textName {
+        font-size: 80px;
+        color: #ffffff;
+      }
+
+      header .divName p {
+        font-size: 30px;
+        color: #ffffff;
+      }
+
+      .container .body {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+
+      .container .body .col-1 {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        height: auto;
+        padding: 20px;
+        background-color: #0687b9;
+        color: #ffffff;
+      }
+
+      .container .body .col-2 {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        height: auto;
+        padding: 20px;
+        font-size: 20px;
+        color: #0687b9;
+      }
+
+      .margin-1 {
+        margin: 150px 20px 20px 20px;
+      }
+
+      .margin-2 {
+        margin: 70px 20px 20px 20px;
+      }
+
+      .col {
+        width: 100%;
+        margin: 13px 0 0 0;
+      }
+
+      .col .title {
+        width: 100%;
+      }
+
+      .col hr {
+        margin: 8px 0 10px 0;
+        border: 1px solid #0e78a1;
+      }
+
+      .col h3 {
+        color: #0e78a1;
+        text-transform: uppercase;
+      }
+
+      .divImg {
+        display: flex;
+        justify-content: center;
+      }
+
+      .contact:hover {
+        box-shadow: 5px 3px 5px #0b7eac, -5px -3px 10px #0b7eac;
       }
     </style>
   </head>
 
   <body>
-    <header>
-      <a class="nav-name">Antonio Romario</a>
-    </header>
-    <main>
-      <div class="">
-        <div class="">
-          <p>
-            Comecei a aprender algumas tecnologias para desenvolvimento web em 2017 como front-end,
-            utilizando html, css , bootstrap e javascript, em um projeto para IFPI - Angical. Posteriormente, em um
-            outros dois projetos para almoxarifado e gestão de RH, utilizamos bootstrap e javascript, utilizamos
-            componentes para otimizar o processo e ajustes, comecei a ler os códigos dos colegas e tentar entender a
-            lógica utilizada para resolver os problemas.
-          </p>
-          <p class="">
-            Em seguida, iniciei vários projetos individualmente para aprender tecnologias back-end, concomitantemente
-            já
-            estava ajudando a equipe em coisas simples voltadas a parte lógica do sistema, sempre estudando e tirando
-            as
-            dúvidas com os colegas.
-          </p>
-          <p class="">
-            Após todo esse processo de aprendizado constante iniciei e finalizei um projeto como requisito para
-            conclusão do curso com o mínimo de ajuda.
-          </p>
-          <p class="">
-            Atualmente estou me especializando em laravel e node na medida do possível.
-          </p>
+    <div class="container">
+      <header>
+        <div class="triangle">
         </div>
-        <!--  -->
-        <p class=" ">
-          <a href="#skil" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Próximo</a>
-        </p>
-      </div>
-      <div class="">
-        <div class="" id="skil">
-          <h1>Habilidades</h1>
-          <hr class="">
-          <p class="">Cover is a one-page template for building simple and beautiful home pages. Download, edit
-            the
-            text, and add your own fullscreen background photo to make it your own.</p>
+        <div class="divName">
+          <p class="textName">Antonio Romario</p>
+          <p>Web Developer</p>
         </div>
-        <p class="">
-          <a href="#port" class="btn btn-lg btn-secondary fw-bold border-white bg-dark">Próximo</a>
-        </p>
-      </div>
-      <!--  -->
-      <div class="" id="port">
-        <h1>Portfolio</h1>
-        <hr class="">
-        <div class="">
-          <div class="row">
-            <div class="">
-              <div class="">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#777"></rect>
-                  <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                </svg>
-                <h2>Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is
-                  the
-                  first column.</p>
-                <p><a class="" href="#">View details »</a></p>
+      </header>
+      <div class="body">
+        <!-- ****************************************************************************** -->
+        <div class="col-1">
+          <div class="margin-1">
+            <div class="col">
+              <div class="divImg">
+                <img src="avatar.png" width="250" alt="">
               </div>
             </div>
-            <div class="">
-              <div class="">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#777"></rect>
-                  <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                </svg>
-                <h2>Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is
-                  the
-                  first column.</p>
-                <p><a class="" href="#">View details »</a></p>
+            <div class="col">
+              <div class="contact"
+                style="display: flex; justify-content: center; flex-direction: column; width: 100%; margin: 30px 0 10px 0;">
+                <a href="https://wa.me/5586981332085" style="text-decoration: none; color: #ffffff;" target=" _blank">
+                  <i class="fab fa-whatsapp"
+                    style="display: flex; justify-content: center; margin: 10px 0 10px 0; font-size: 50px;"></i>
+                  <p>
+                    <p style="font-size: 18px; text-transform: uppercase;  display: flex; justify-content: center ;">
+                      (86) 9 8133 - 2085</p>
+                  </p>
+                </a>
               </div>
-            </div>
-            <div class="">
-              <div class="">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                  preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#777"></rect>
-                  <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                </svg>
-                <h2>Heading</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is
-                  the
-                  first column.</p>
-                <p><a class="" href="#">View details »</a></p>
+              <div class="contact"
+                style="display: flex; justify-content: center; flex-direction: column; width: 100%; margin: 30px 0 10px 0;">
+                <a href="http://www.instagram.com/cactoscoders" target="blank"
+                  style="text-decoration: none; color: #ffffff; ">
+                  <i class="fab fa-instagram"
+                    style="display: flex; justify-content: center; margin: 10px 0 10px 0; font-size: 50px;"></i>
+                  <p>
+                    <p style="font-size: 18px; text-transform: uppercase; ; display: flex; justify-content: center ; ">
+                      @cactoscoders</p>
+                  </p>
+                </a>
+              </div>
+              <div class="contact"
+                style="display: flex; justify-content: center; flex-direction: column; width: 100%; margin: 30px 0 10px 0;">
+                <a href="mailto:anotonioromas@gmail.com" target="blank" style="color: #ffffff;text-decoration: none">
+                  <i class="far fa-envelope"
+                    style="display: flex; justify-content: center; margin: 10px 0 10px 0; font-size: 50px;"></i>
+                  <p>
+                    <p style="font-size: 18px; text-transform: uppercase; ; display: flex; justify-content: center ; ">
+                      anotonioromas@gmail.com</p>
+                  </p>
+                </a>
+              </div>
+              <div class="contact"
+                style="display: flex; justify-content: center; flex-direction: column; width: 100%; margin: 30px 0 10px 0;">
+                <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none;">
+                  <i class="fab fa-github"
+                    style="display: flex; justify-content: center; margin: 10px 0 10px 0; font-size: 50px;"></i>
+                  <p>
+                    <p style="font-size: 18px; text-transform: uppercase;  display: flex; justify-content: center ; ">
+                      github</p>
+                  </p>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <p class="">
-          <a href="#cont" class="">Próximo</a>
-        </p>
-      </div>
-      <!--  -->
-      <div class="" id="cont">
-        <h1>Contatos</h1>
-        <div class="">
-          <div class="">
-            <!-- <h2 class="section-heading">Contato</h2> -->
-            <hr class="">
-            <p class=""></p>
+        <!-- ************************************************************* -->
+        <div class="col-2">
+          <div class="margin-2">
+            <div class="col">
+              <div class="title">
+                <h3>Perfil Profissional</h3>
+                <hr>
+              </div>
+              <p>
+                Comecei a aprender algumas tecnologias para desenvolvimento web em 2017 como front-end,
+                utilizando html, css , bootstrap e javascript, em um projeto para IFPI - Angical. Posteriormente, em um
+                outros dois projetos para almoxarifado e gestão de RH, utilizamos bootstrap e javascript, utilizamos
+                componentes para otimizar o processo e ajustes, comecei a ler os códigos dos colegas e tentar entender a
+                lógica utilizada para resolver os problemas.
+              </p>
+              <p class="">
+                Em seguida, iniciei vários projetos individualmente para aprender tecnologias back-end,
+                concomitantemente
+                já
+                estava ajudando a equipe em coisas simples voltadas a parte lógica do sistema, sempre estudando e
+                tirando
+                as
+                dúvidas com os colegas.
+              </p>
+              <p class="">
+                Após todo esse processo de aprendizado constante iniciei e finalizei um projeto como requisito para
+                conclusão do curso com o mínimo de ajuda.
+              </p>
+              <p class="">
+                Atualmente estou me especializando em laravel e node na medida do possível.
+              </p>
+            </div>
+            <div class="col">
+              <div class="title">
+                <h3>formação</h3>
+                <hr>
+              </div>
+              <div style="padding: 5px;">
+                <div style="display: flex; flex-direction: row; padding: 5px;">
+                  <div style="display: flex; flex-direction: column;">
+                    <p style="margin: 5px;">Bacharel em Sistemas de Informação</p>
+                    <p style="margin: 5px;"> Faculdade Cristo Reis</p>
+                  </div>
+                  <p style="font-weight: bold; color: black;margin: 5px;">02/02/2020</p>
+                </div>
+              </div>
+              <div style="padding: 5px;">
+                <div style="display: flex; flex-direction: row; padding: 5px;">
+                  <div style="display: flex; flex-direction: column;">
+                    <p style="margin: 5px;">Bacharel em Sistemas de Informação</p>
+                    <p style="margin: 5px;">Universidade Federal do Piauí - UFPI</p>
+                  </div>
+                  <p style="font-weight: bold; color: black;margin: 5px;">02/02/2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="title">
+                <h3>Experiências</h3>
+                <hr>
+              </div>
+              <div style="padding: 5px;">
+                <div style="display: flex; flex-direction: row; padding: 5px;">
+                  <div style="display: flex; flex-direction: column;">
+                    <p style="margin: 5px;">Vikstar Contact Center</p>
+                    <p style="margin: 5px;"> <span style="font-weight: bold;">Cargo:</span> Operador de Telemarketing
+                    </p>
+                    <p style="margin: 5px">
+                      <span style="font-weight: bold;">Período:</span> De 22-09-2014 a 26-06-2015
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div style="padding: 5px;">
+                <div style="display: flex; flex-direction: row; padding: 5px;">
+                  <div style="display: flex; flex-direction: column;">
+                    <p style="margin: 5px;">Agrovila</p>
+                    <p style="margin: 5px;">
+                      <span style="font-weight: bold;">Cargo:</span> Serviços Gerais
+                    </p>
+                    <p style="margin: 5px;">
+                      <span style="font-weight: bold;">Período:</span> 1 ano
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="title">
+                <h3>Cursos</h3>
+                <hr>
+              </div>
+              <div style="padding: 5px;">
+                <div style="display: flex; flex-direction: row; padding: 5px;">
+                  <div style="display: flex; flex-direction: column;">
+                    <p style="margin: 5px;">Técnico em comércio</p>
+                    <p style="margin: 5px;">Instituto Federal do Piauí - IFPI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="">
+      </div>
 
-        </div>
-      </div>
-    </main>
-    <footer class=" ">
-      <p>Developer at Antonio Romario</p>
-    </footer>
     </div>
   </body>
 
