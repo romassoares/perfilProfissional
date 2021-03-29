@@ -3,8 +3,8 @@
 .row{ display: flex; flex-direction: column; width: 100%;  }
 .col{ display: flex; flex-direction: column ;width: auto; }
 .col-2{ display: flex; flex-direction: column; width: auto; }
-.space-1{  display: flex;  flex-direction: column; padding: 10px;  width: 40%; height: 100% ;background-color: cornflowerblue; }
-.space-2{  display: flex;  flex-direction: column;  padding: 10px;  width: 60%; height: 100%}
+.space-1{  display: flex;  flex-direction: column; padding: 10px;  width: 40%; background-color: cornflowerblue; }
+.space-2{  display: flex;  flex-direction: column;  padding: 10px;  width: 60%; }
 .nav{  display: flex;  justify-content: center;  align-items: center;  flex-direction: column;  width: 100%;}
 .nav .divImg{  display: flex;  align-items: center;  justify-content: center;  width: auto;}
 .nav .divName{ display: flex; justify-content: center; align-items: center; flex-direction: row; padding: 5px;}
