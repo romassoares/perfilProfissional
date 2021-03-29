@@ -14,207 +14,173 @@
     <!-- Favs -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaPhone.css">
-    <link rel="stylesheet" href="mediaTable.css">
-    <link rel="stylesheet" href="media-T-600.css">
   </head>
+  <script>
+    async function usersGit() {
+      const user = await fetch('https://api.github.com/users/romassoares')
+      const result = await user.json()
+      const img = document.querySelector('#divImg')
+      if (img) {
+        const h = document.querySelector(".txtNav")
+        h.innerText = result.name
+        const t = document.querySelector("#fun")
+        t.innerText = result.bio
+        img.setAttribute('src', result.avatar_url)
+      }
+    }
+    usersGit()
+  </script>
 
   <body>
     <div class="container">
-      <header>
-        <div class="triangle">
-        </div>
-        <div class="divName">
-          <p class="textName">Antonio Romario</p>
-          <p>Web Developer</p>
-        </div>
-      </header>
-      <div class="body">
-        <!-- ****************************************************************************** -->
-        <div class="col-1">
-          <div class="margin-1">
-            <div class="col">
-              <div class="divImg">
-                <img src="avatar.png" width="250" alt="">
-              </div>
+      <div class="space-1">
+        <div class="row">
+          <div class="nav">
+            <div class="divImg">
+              <img id="divImg" alt="">
             </div>
-            <div class="col">
-              <div class="contact">
-                <a href="https://wa.me/5586981332085" style="text-decoration: none; color: #ffffff;" target=" _blank">
-                  <i class="fab fa-whatsapp"></i>
-                  <p>(86) 9 8133 - 2085</p>
-                </a>
-              </div>
-              <div class="contact">
-                <a href="http://www.instagram.com/cactoscoders" target="blank"
-                  style="text-decoration: none; color: #ffffff; ">
-                  <i class="fab fa-instagram "></i>
-                  <p>@cactoscoders</p>
-                </a>
-              </div>
-              <div class="contact">
-                <a href="mailto:anotonioromas@gmail.com" target="blank" style="color: #ffffff;text-decoration: none">
-                  <i class="far fa-envelope "></i>
-                  <p>anotonioromas@gma </p>
-                </a>
-              </div>
-              <div class="contact">
-                <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none;">
-                  <i class="fab fa-github"></i>
-                  <p>github</p>
-                </a>
-              </div>
+            <div class="divName">
+              <div class="txtNav"></div>
             </div>
-            <!-- ********************HABILIDADES*************************** -->
-            <div class="col">
-              <div class="skillsRowTitle">
-                <div class="title">
-                  <p>habilidades</p>
-                </div>
-              </div>
-              <div class="rowSkills">
-                <div class="card">
-                  <div href="https://github.com/romassoares" target="_blank" class="divLink">
-                    <i class="fab fa-php"></i>
-                    <p> php</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div href="https://github.com/romassoares" target="_blank" class="divLink">
-                    <i class="fab fa-js"></i>
-                    <p> javascript </p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div href="https://github.com/romassoares" target="_blank" class="divLink">
-                    <i class="fab fa-html5"></i>
-                    <p> html </p>
-                  </div>
-                </div>
-              </div>
-              <div class="rowSkills">
-                <div class="card">
-                  <div href="https://github.com/romassoares" target="_blank" class="divLink">
-                    <i class="fab fa-css3-alt"></i>
-                    <p> css </p>
-                  </div>
-                </div>
-                <div class="card">
-                  <div href="https://github.com/romassoares" target="_blank" class="divLink">
-                    <i class="fab fa-react"></i>
-                    <p> ReactJs </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ******************** FIM HABILIDADES*************************** -->
+            <h3 id="fun"></h3>
           </div>
-        </div>
-        <!-- ************************************************************* -->
-        <div class="col-2">
-          <div class="margin-2">
+          <div class="col-2">
             <div class="col">
-              <div class="title">
-                <h3>Perfil Profissional</h3>
-                <hr>
-              </div>
-              <p>
-                Comecei a aprender algumas tecnologias para desenvolvimento web em 2017 como front-end,
-                utilizando html, css , bootstrap e javascript, em um projeto para IFPI - Angical. Posteriormente, em um
-                outros dois projetos para almoxarifado e gestão de RH, utilizamos bootstrap e javascript, utilizamos
-                componentes para otimizar o processo e ajustes, comecei a ler os códigos dos colegas e tentar entender a
-                lógica utilizada para resolver os problemas.
-              </p>
-              <p class="">
-                Em seguida, iniciei vários projetos individualmente para aprender tecnologias back-end,
-                concomitantemente
-                já
-                estava ajudando a equipe em coisas simples voltadas a parte lógica do sistema, sempre estudando e
-                tirando
-                as
-                dúvidas com os colegas.
-              </p>
-              <p class="">
-                Após todo esse processo de aprendizado constante iniciei e finalizei um projeto como requisito para
-                conclusão do curso com o mínimo de ajuda.
-              </p>
-              <p class="">
-                Atualmente estou me especializando em laravel e node na medida do possível.
-              </p>
-            </div>
-            <div class="col">
-              <div class="title">
-                <h3>formação</h3>
-                <hr>
-              </div>
-              <div style="padding: 5px;">
-                <div class="row-p-5">
-                  <div class="column">
-                    <p class="m-5">Bacharel em Ciências Contábeis</p>
-                    <p class="m-5"> Faculdade Cristo Reis</p>
-                  </div>
-                  <p class="date">02/02/2020</p>
+              <p class="title">Contact</p>
+              <div class="contact">
+                <div class="item">
+                  <a href="https://wa.me/5586981332085" style="text-decoration: none; color: #ffffff;" target=" _blank">
+                    <i class="fab fa-whatsapp icon"></i>
+                    <p>(86)98133-2085</p>
+                  </a>
                 </div>
-              </div>
-              <div style="padding: 5px;">
-                <div class="row-p-5">
-                  <div class="column">
-                    <p class="m-5">Bacharel em Sistemas de Informação</p>
-                    <p class="m-5">Universidade Federal do Piauí - UFPI</p>
-                  </div>
-                  <p class="date">02/02/2020</p>
+                <div class="item">
+                  <a href="http://www.instagram.com/cactoscoders" target="blank"
+                    style="text-decoration: none; color: #ffffff; ">
+                    <i class="fab fa-instagram icon"></i>
+                    <p>instagram</p>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="mailto:anotonioromas@gmail.com" target="blank" style="color: #ffffff;text-decoration: none">
+                    <i class="far fa-envelope icon"></i>
+                    <p>gmail </p>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/romassoares" target="_blank"
+                    style="color: #ffffff;text-decoration: none;">
+                    <i class="fab fa-github icon"></i>
+                    <p>github</p>
+                  </a>
                 </div>
               </div>
             </div>
+
             <div class="col">
-              <div class="title">
-                <h3>Experiências</h3>
-                <hr>
-              </div>
-              <div style="padding: 5px;">
-                <div class="row-p-5">
-                  <div class="column">
-                    <p class="m-5"> <span class="font-weight-bold">Vikstar Contact Center</span></p>
-                    <p class="m-5"> <span class="font-weight-bold">Cargo:</span> Operador de Telemarketing
-                    </p>
-                    <p style="margin: 5px">
-                      <span class="font-weight-bold">Período:</span> De 22-09-2014 a 26-06-2015
-                    </p>
-                  </div>
+              <p class="title">Skills</p>
+              <div class="contact">
+                <div class="item">
+                  <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none">
+                    <i class="fab fa-php icon"></i>
+                    <!-- <p> php</p> -->
+                  </a>
                 </div>
-              </div>
-              <div style="padding: 5px;">
-                <div class="row-p-5">
-                  <div class="column">
-                    <p class="m-5"><span class="font-weight-bold">Agrovila</span></p>
-                    <p class="m-5">
-                      <span class="font-weight-bold">Cargo:</span> Serviços Gerais
-                    </p>
-                    <p class="m-5">
-                      <span class="font-weight-bold">Período:</span> 1 ano
-                    </p>
-                  </div>
+                <div class="item">
+                  <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none">
+                    <i class="fab fa-js icon"></i>
+                    <!-- <p> javascript </p> -->
+                  </a>
                 </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="title">
-                <h3>Cursos</h3>
-                <hr>
-              </div>
-              <div style="padding: 5px;">
-                <div class="row-p-5">
-                  <div class="column">
-                    <p class="m-5">Técnico em comércio</p>
-                    <p class="m-5">Instituto Federal do Piauí - IFPI</p>
-                  </div>
+                <div class="item">
+                  <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none">
+                    <i class="fab fa-html5 icon"></i>
+                    <!-- <p> html </p> -->
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none">
+                    <i class="fab fa-css3-alt icon"></i>
+                    <!-- <p> css </p> -->
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="https://github.com/romassoares" target="_blank" style="color: #ffffff;text-decoration: none">
+                    <i class="fab fa-react icon"></i>
+                    <!-- <p> ReactJs </p> -->
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="space-2">
+        <div class="title">
+          <h3>formação</h3>
 
+        </div>
+        <div class="row-2">
+          <div class="item-2">
+            <div class="text-2">
+              <p class="">Bacharel em Ciências Contábeis</p>
+              <p class=""> Faculdade Cristo Reis</p>
+            </div>
+            <p class="bold">02/02/2020</p>
+          </div>
+          <div class="item-2">
+            <div class="text-2">
+              <p class="">Bacharel em Sistemas de Informação</p>
+              <p class="">Universidade Federal do Piauí - UFPI</p>
+            </div>
+            <p class="bold">02/02/2020</p>
+          </div>
+        </div>
+        <div class="title">
+          <h3>Experiências</h3>
+        </div>
+        <div class="row-2">
+          <div class="item-2">
+            <div class="text-2">
+              <p class=""> <span class="bold">Empresa: </span>Vikstar Center</p>
+              <p class=""> <span class="bold">Cargo:</span> Operador de Telemarketing
+              </p>
+              <p class="">
+                <span class="bold">Período:</span> De 22-09-2014 a 26-06-2015
+              </p>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="text-2">
+              <p class=""><span class="bold">Empresa: </span> Agrovila</p>
+              <p class="">
+                <span class="bold">Cargo:</span> Serviços Gerais
+              </p>
+              <p class="">
+                <span class="bold">Período:</span> 1 ano
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="title">
+          <h3>Cursos</h3>
+
+        </div>
+        <div class="row-2">
+          <div class="item-2">
+            <div class="text-2">
+              <p class="">Instituto Federal do Piauí - IFPI</p>
+              <p class="">Técnico em comércio</p>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="text-2">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ************************************************************************************* -->
     </div>
   </body>
 
