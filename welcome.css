@@ -102,3 +102,11 @@ nav li a.active,a:hover {
         left: 0;
     }
 }
+@media (max-width:405px){
+    nav .logo{
+        font-size: 35px;
+        line-height: 70px;
+        padding: 0 75px;
+        font-weight: bold;
+    }   
+}
