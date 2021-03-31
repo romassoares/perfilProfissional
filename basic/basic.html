@@ -14,20 +14,10 @@
     <!-- Favs -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="stylesheet" href="style.css">
+    <script src="../api.js"></script>
   </head>
   <script>
-    async function usersGit() {
-      const user = await fetch('https://api.github.com/users/romassoares')
-      const result = await user.json()
-      const img = document.querySelector('#divImg')
-      if (img) {
-        const h = document.querySelector(".txtNav")
-        h.innerText = result.name
-        const t = document.querySelector("#fun")
-        t.innerText = result.bio
-        img.setAttribute('src', result.avatar_url)
-      }
-    }
+
     usersGit()
   </script>
 
@@ -185,7 +175,6 @@
         </div>
         <div class="title">
           <h3>Cursos</h3>
-
         </div>
         <div class="row-2">
           <div class="item-2">
@@ -201,7 +190,13 @@
           </div>
         </div>
       </div>
+      <div class="space-3">
+        <div class="row"></div>
+      </div>
       <!-- ************************************************************************************* -->
+      <div class="footer">
+        <p>@copyright</p>
+      </div>
     </div>
   </body>
 
