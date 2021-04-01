@@ -11,9 +11,9 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    background: var(--c);
 }
 .container{
+    background: var(--c);
     display: block;
     padding: 20px;
 }
@@ -21,79 +21,95 @@ body{
     font-family: monospace;
     color: var(--e);
 }
+/* *********************************************************************************** */
 .my{
-    display: block;
-    border: 1px solid violet;
-}
-.skillWithTechnologies{
     width: 100%;
+    text-align: center;
     display: inline-block;
+}
+.my #divImg{
+    width: 200px;
+    height: auto;
+    /* float: right; */
+}
+.my .contact{
+    /* float: right; */
+    padding: 5px;
+}
+.my #txtNav{
+    text-align: center;
+    font-size: 21px;
+}
+.my #fun{
+    font-size: 17px;
+    text-align: center;
+}
+/* *********************************************************************************** */
+.skillWithTechnologies{
+    display: inline-block;
+    width: 100%;
 }
 .skill{
     float: left;
-    /* display: inline-block; */
-    width: 50%;
-    height: 200px;
-    padding: 5px;
+    min-width: 49%;
+    height: 100px;
     margin: 5px;
     background: var(--e);
     font-size: 25px;
 }
-.fin{
-    padding: 10px;
+/* *********************************************************************************** */
+.skill .calculator{
     text-align: center;
-    background: var(--e);
+    background-color: transparent;
 }
-.fin .btnFin{
-    background: var(--d);
+.skill .calculator{
+    color: var(--c);
+}
+.skill .calculator .bodyCalculator{
+    padding: 3px;
+}
+.skill .calculator  #result{
+    font-size: 20px;
+    color: yellowgreen;
+}
+.skill .calculator .bodyCalculator .inputCalc{
+    font-size: 17px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
-    padding: 5px;
+}
+.skill .calculator .bodyCalculator .btn{
+    background-color: var(--d);
+    font-size: 17px;
     color: var(--e);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.skill .calculator .bodyCalculator .btn:hover{
+color: #9c9b9b;
+}
+/* ************************************************************************************ */
+.fin{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    background: var(--e);
 }
 .fin .btnFin:hover{
     background: var(--c);
     color: #9c9b9b;
 }
-.skill label{
-    display: block;
-    font-size: 25px;
-    width: 100%;
-    margin: 5px;
-    color: var(--c);
-    background-color: transparent;
-}
-
-.skill .inputCalc{
+.fin .btnFin{
+    text-align: center;
     font-size: 17px;
     border: none;
     border-radius: 5px;
     padding: 5px;
-    margin: 5px;
-    color: var(--e);
-}
-.skill .inputCalc:hover{
-    border: #5F665C;
-}
-.skill .btn{
-    padding: 7px;
-    font-size: 17px;
-    border: none;
     background: var(--d);
     color: var(--e);
-    border-radius: 5px;
 }
-.skill .btn:hover{
-    background-color: var(--c);
-    color: #9c9b9b;
-    transition: .5s;
-}
-.skill #result{
-    background: transparent;
-    color: #004e00;
-    font-weight: bold;
-}
-/*  */
+/* ************************************************************************************ */
 nav{
     height: 80px;
     width: 100%;
@@ -147,7 +163,8 @@ nav li a.active,a:hover {
        font-size: 16px;
    }
    .skill{
-        width: 50%;
+        width: 100%;
+        height: auto;
     }
 }
 @media (max-width: 858px){

@@ -3,7 +3,7 @@ async function usersGit() {
     const result = await user.json()
     const img = document.querySelector('#divImg')
     if (img) {
-        const h = document.querySelector(".txtNav")
+        const h = document.querySelector("#txtNav")
         h.innerText = result.name
         const t = document.querySelector("#fun")
         t.innerText = result.bio
