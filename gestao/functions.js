@@ -1,4 +1,4 @@
-const transationUl = document.querySelector('#transations')
+const transationUl = document.querySelector('#transactions')
 const incomeDisplay = document.querySelector('#money-plus')
 const expenseDisplay = document.querySelector('#money-minus')
 const balanceDisplay = document.querySelector('#balance')
@@ -22,12 +22,11 @@ const addTransationIntoDOM = transation => {
 
     const li = document.createElement('li')
     li.classList.add(CSSClass)
-    li.innerText = `
-        ${transation.name} <span>${operator}R$ ${amountWithoutOperator}</span>
-        <button class="delete-btn" onClick="removeTransation(${transation.id})">
-            x
-        </button>
-    `
+
+    var tags = `${transation.name} <span>${operator}R$ ${amountWithoutOperator}</span>
+    <button class="delete-btn" onClick="removeTransation(${transation.id})"> x </button>`
+
+    li.innerHTML = tags
     transationUl.appendChild(li)
 }
 
@@ -63,11 +62,10 @@ const updateLocalStorage = () => {
     localStorage.setItem('transations', JSON.stringify(transations))
 }
 
-const generateID = Math.round(Math.random() * 1000)
+const generateID = () => Math.round(Math.random() * 1000)
 
 form.addEventListener('submit', event => {
     event.preventDefault()
-
     const transationName = inputTransationName.value.trim()
     const transationAmount = inputTransationAmount.value.trim()
 
@@ -81,7 +79,6 @@ form.addEventListener('submit', event => {
         name: transationName,
         amount: Number(transationAmount)
     }
-
     transations.push(transation)
     init()
     updateLocalStorage()
