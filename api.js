@@ -10,7 +10,3 @@ async function usersGit() {
         img.setAttribute('src', result.avatar_url)
     }
 }
-function openMenu() {
-    console.log(e.target)
-
-}

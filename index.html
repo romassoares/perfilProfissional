@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="welcome.css">
         <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
         <script src="api.js"></script>
+        <script src="skills.js"></script>
         <script>
             userGit()
         </script>
@@ -29,8 +30,40 @@
                 <li><a href="">others</a></li>
             </ul>
         </nav>
-        <div>
-            <a href="basic/basic.html">Basic</a>
+        <div class="container">
+            <div class="systens">
+                <a href="basic/basic.html">static Page Professional Profile </a>
+            </div>
+            <div class="my">
+                <div id="divImg"></div>
+                <div class="txtNav"></div>
+                <div id="fun"></div>
+            </div>
+            <div class="skillWithTechnologies">
+                <!--  -->
+                <div class="skill">
+                    <label for="">Calculator</label>
+                    <input type="number" id="one" class="inputCalc">
+                    <input type="number" id="two" class="inputCalc">
+                    <select name="op" id="op" class="inputCalc">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="/">/</option>
+                        <option value="*">*</option>
+                    </select>
+                    <button class="btn" onclick="calc(one,two,op)">Calculate</button>
+                    <div id="result"></div>
+                </div>
+
+                <!--  -->
+
+                <div class="skill">
+                    <div class="fin">
+                        <a class="btnFin" href="gestao/index.html"> Financeiro</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </body>
 

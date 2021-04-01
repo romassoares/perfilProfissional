@@ -11,16 +11,102 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    background: var(--c);
+}
+.systens{
+    width: 100%;
+}
+.systens a{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    border: none;
+    background: var(--d);
+    color: var(--e);
+    border-radius: 5px;
+    line-height: 50px;
+    margin-left: 30px;
+}
+.systens a:hover{
+    color: var(--d);
+}
+.container{
+    width: 100%;
 }
 body{
     font-family: monospace;
     color: var(--e);
 }
+.skillWithTechnologies{
+    padding: 10px;
+    width: 100%;
+}
+/*  */
+.skill{
+    display: inline-block;
+    width: 33.33%;
+    padding: 5px;
+    background: var(--e);
+    font-size: 25px;
+}
+.fin{
+    padding: 10px;
+    text-align: center;
+    background: var(--e);
+}
+.fin .btnFin{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--e);
+}
+.skill label{
+    display: block;
+    font-size: 25px;
+    width: 100%;
+    margin: 5px;
+    color: var(--c);
+    background-color: transparent;
+}
 
+.skill .inputCalc{
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: auto;
+    color: var(--e);
+}
+.skill .inputCalc:hover{
+    border: #5F665C;
+}
+.skill .btn{
+    padding: 7px;
+    font-size: 17px;
+    border: none;
+    color: var(--e);
+    border-radius: 5px;
+}
+.skill .btn:hover{
+    color: #9c9b9b;
+    transition: .5s;
+}
+.skill #result{
+    background: transparent;
+    color: #004e00;
+    font-weight: bold;
+}
+
+
+
+
+/*  */
 nav{
     height: 80px;
     width: 100%;
     background: var(--c);
+    border-bottom: solid 0.5px var(--e);
 }
 nav .logo{
     font-size: 35px;
@@ -34,7 +120,7 @@ nav ul{
 }
 nav li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 75px;
     margin: 0 5px;
 }
 nav li a{
@@ -52,7 +138,7 @@ nav li a.active,a:hover {
 .checkbtn{
     font-size: 30px;
     float: right;
-    line-height: 80px;
+    line-height: 75px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
@@ -98,6 +184,7 @@ nav li a.active,a:hover {
         left: 0;
     }
 }
+
 @media (max-width:405px){
     nav .logo{
         font-size: 35px;
