@@ -5,7 +5,7 @@ function calc(one, two, op) {
     const result = document.querySelector('#result')
     if (result) {
         if (p == '+') {
-            const soma = x + y
+            const soma = (x + y)
             result.innerText = soma
         }
         if (p == '-') {

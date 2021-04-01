@@ -13,39 +13,29 @@
     box-sizing: border-box;
     background: var(--c);
 }
-.systens{
-    width: 100%;
-}
-.systens a{
-    font-size: 20px;
-    font-weight: 600;
-    padding: 5px;
-    border: none;
-    background: var(--d);
-    color: var(--e);
-    border-radius: 5px;
-    line-height: 50px;
-    margin-left: 30px;
-}
-.systens a:hover{
-    color: var(--d);
-}
 .container{
-    width: 100%;
+    display: block;
+    padding: 20px;
 }
 body{
     font-family: monospace;
     color: var(--e);
 }
-.skillWithTechnologies{
-    padding: 10px;
-    width: 100%;
+.my{
+    display: block;
+    border: 1px solid violet;
 }
-/*  */
-.skill{
+.skillWithTechnologies{
+    width: 100%;
     display: inline-block;
-    width: 33.33%;
+}
+.skill{
+    float: left;
+    /* display: inline-block; */
+    width: 50%;
+    height: 200px;
     padding: 5px;
+    margin: 5px;
     background: var(--e);
     font-size: 25px;
 }
@@ -55,10 +45,15 @@ body{
     background: var(--e);
 }
 .fin .btnFin{
+    background: var(--d);
     border: none;
     border-radius: 5px;
     padding: 5px;
     color: var(--e);
+}
+.fin .btnFin:hover{
+    background: var(--c);
+    color: #9c9b9b;
 }
 .skill label{
     display: block;
@@ -75,7 +70,6 @@ body{
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
-    width: auto;
     color: var(--e);
 }
 .skill .inputCalc:hover{
@@ -85,10 +79,12 @@ body{
     padding: 7px;
     font-size: 17px;
     border: none;
+    background: var(--d);
     color: var(--e);
     border-radius: 5px;
 }
 .skill .btn:hover{
+    background-color: var(--c);
     color: #9c9b9b;
     transition: .5s;
 }
@@ -97,10 +93,6 @@ body{
     color: #004e00;
     font-weight: bold;
 }
-
-
-
-
 /*  */
 nav{
     height: 80px;
@@ -146,7 +138,7 @@ nav li a.active,a:hover {
 #check{
     display: none;
 }
-@media (max-width: 952px) {
+@media (max-width: 958px) {
    nav .logo{
        font-size: 30px;
        padding-left: 50px;
@@ -154,6 +146,9 @@ nav li a.active,a:hover {
    nav li a{
        font-size: 16px;
    }
+   .skill{
+        width: 50%;
+    }
 }
 @media (max-width: 858px){
     .checkbtn{
@@ -183,6 +178,9 @@ nav li a.active,a:hover {
     #check:checked ~ ul{
         left: 0;
     }
+    .skill{
+        width: 100%;
+    }
 }
 
 @media (max-width:405px){
@@ -192,4 +190,7 @@ nav li a.active,a:hover {
         padding: 0 75px;
         font-weight: bold;
     }   
+    .skill{
+        width: 100%;
+    }
 }
