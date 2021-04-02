@@ -41,7 +41,7 @@ input[type='text'],input[type='number'] { border: 1px solid #dedede; border-radi
 
 .btn:focus,.delete-btn:focus { outline: 0;}
 
-.transactions { list-style-type: none; padding: 0; margin-bottom: 40px; height: 150px; overflow: auto;}
+.transactions { list-style-type: none; padding: 0; margin-bottom: 40px;}
 
 .transactions li { background-color: #fff; box-shadow: var(--box-shadow); color: #333;
   display: flex; justify-content: space-between; position: relative; padding: 10px; margin:3px 30px;}
