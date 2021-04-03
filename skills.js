@@ -1,11 +1,11 @@
 function calc(one, two, op) {
-    const x = one.value
-    const y = two.value
-    const p = op.value
+    let x = parseInt(one.value)
+    let y = parseInt(two.value)
+    let p = op.value
     const result = document.querySelector('#result')
     if (result) {
         if (p == '+') {
-            const soma = (x + y)
+            let soma = x + y
             result.innerText = soma
         }
         if (p == '-') {

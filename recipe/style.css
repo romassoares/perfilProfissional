@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --a:#10A16F;
+  --b:#36D9CF;
+  --c:#D36500;
+  --d:#6E5B2C;
+  --e:#A17810;
+  --f:#FAF7F7;
+  --g:#ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+nav{
+  text-align: center;
+  background-color: var(--e);
+  color: var(--g);
+  padding: 10px;
+}
+.body{
+  width: 100%;
+  padding: 30px;
+}
+.space-1{
+  width: 50%;
+  float: left;
+}
+.space-2{
+  width: 50%;
+  float: left;
+}
+.card{
+  width: auto;
+  padding: 15px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.541);
+  margin: 5px;
+}
+.title{
+  text-align: center;
+  font-size: 24px;
+  background-color: var(--e);
+  color: var(--g);
+  font-weight: bold;
+  border-radius: 7px 7px 0 0 ;
+}
+.body{
+  width: auto;
+}
+label{
+  margin-right: 15px;
+  font-size: 17px;
+}
+input{
+  width: 100%;
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0 10px 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.541);
+}
+.form-group{
+  padding: 8px;
+}
+button{
+  padding: 5px;
+  border-radius: 5px;
+  border: var(--a) solid 0.2px;
+  background-color: var(--b);
+  opacity: 0.8;
+  font-size: 17px;
+  font-weight: 400;
+}
+button:hover{
+  opacity: 1;
+}
+table{
+  width: 100%;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+th,td{
+  text-align: center;
+  padding: 7px;
+}
+@media screen and (max-width: 880px) {
+  .space-1, .space-2{
+    width: 100%;
+  }
+}
