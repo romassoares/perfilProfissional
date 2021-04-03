@@ -23,6 +23,9 @@ nav{
   color: var(--g);
   padding: 10px;
 }
+body{
+  background-color: var(--f);
+}
 .body{
   width: 100%;
   padding: 30px;
