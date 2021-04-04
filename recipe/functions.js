@@ -3,12 +3,11 @@ const formIngredient = document.querySelector('#ingredients')
 const inputProduct = document.querySelector('#productInput')
 const inputName = document.querySelector('#nameInput')
 const inputAmount = document.querySelector('#amountInput')
+const inputPrice = document.querySelector('#priceInput')
 const tbodyEl = document.querySelector('#tbody')
 const tHead = document.querySelector('#trHead')
 
 const id = () => { return Number(Math.abs(Math.random()).toFixed(2)) }
-// localStorage.removeItem() para remover um par específico;
-// localStorage.clear() apaga TODOS os pares gravados pro aquele domínio;
 
 const localStorageIngredients = JSON.parse(localStorage.getItem('Ingredients'))
 let Ingredients = localStorage.getItem('Ingredients') !== null ? localStorageIngredients : []
@@ -16,13 +15,20 @@ let Ingredients = localStorage.getItem('Ingredients') !== null ? localStorageIng
 const localStorageProduct = JSON.parse(localStorage.getItem('@Product'))
 let Product = localStorage.getItem('@Product') == null ? localStorageProduct : ''
 
+function tot() {
+    const reportUl = document.querySelector('#tdReport')
+    // let t = Ingredients.reduce((tot, atual) => tot + atual.price)
+    // reportUl.innerHTML = t
+}
+
 const updateDom = itens => {
     var trEL = document.createElement('tr')
     let tags = `
         <td>${itens.id}</td>
         <td>${itens.name}</td>
+        <td>${itens.price}</td>
         <td>${itens.amount}</td>
-        <td><button id="${itens.id}"><i class="fas fa-trash"></i> </button></td>
+        <td><button onClick="deleteItem(${itens.id})"><i class="fas fa-trash"></i> </button></td>
         `
     trEL.innerHTML = tags
     tbodyEl.appendChild(trEL)
@@ -44,7 +50,9 @@ function start() {
     updateDomProduct(Product)
 }
 
+tot()
 start()
+
 const updateLocalStorageIngredient = () => {
     localStorage.setItem('Ingredients', JSON.stringify(Ingredients))
 }
@@ -56,16 +64,18 @@ formIngredient.addEventListener('submit', event => {
     event.preventDefault()
     const ingredientName = inputName.value
     const ingredientAmount = inputAmount.value
-    if (ingredientName === '' || ingredientAmount === '') {
+    const ingredientPrice = inputPrice.value
+    if (ingredientName === '' || ingredientAmount === '' || ingredientPrice === '') {
         alert('campos vazios')
         return
     }
-    const ingredient = { id: id(), name: ingredientName, amount: Number(ingredientAmount) }
+    const ingredient = { id: id(), name: ingredientName, price: Number(ingredientPrice), amount: Number(ingredientAmount) }
     Ingredients.push(ingredient)
     start()
     updateLocalStorageIngredient()
     ingredientName.innerHTML = ''
     ingredientAmount.innerHTML = ''
+    ingredientPrice.innerHTML = ''
 })
 
 formProduct.addEventListener('submit', event => {
@@ -80,3 +90,9 @@ formProduct.addEventListener('submit', event => {
     start()
     productValue = ''
 })
+
+function deleteItem(ID) {
+    Ingredients = Ingredients.filter(ingredient => ingredient.id != ID)
+    start()
+    updateLocalStorageIngredient()
+}
