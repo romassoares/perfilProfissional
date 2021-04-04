@@ -1,88 +1,82 @@
-const transationUl = document.querySelector('#transactions')
-const incomeDisplay = document.querySelector('#money-plus')
-const expenseDisplay = document.querySelector('#money-minus')
-const balanceDisplay = document.querySelector('#balance')
-const form = document.querySelector('#form')
-const inputTransationName = document.querySelector('#text')
-const inputTransationAmount = document.querySelector('#amount')
+const formProduct = document.querySelector('#productForm')
+const formIngredient = document.querySelector('#ingredients')
+const inputProduct = document.querySelector('#productInput')
+const inputName = document.querySelector('#nameInput')
+const inputAmount = document.querySelector('#amountInput')
+const tbodyEl = document.querySelector('#tbody')
+const tHead = document.querySelector('#trHead')
 
-const localStorageTransations = JSON.parse(localStorage.getItem('transations'))
-let transations = localStorage.getItem('transations') !== null ? localStorageTransations : []
+const id = () => { return Number(Math.abs(Math.random()).toFixed(2)) }
+// localStorage.removeItem() para remover um par específico;
+// localStorage.clear() apaga TODOS os pares gravados pro aquele domínio;
 
-const removeTransation = ID => {
-    transations = transations.filter(transation => transation.id != ID)
-    updateLocalStorage()
-    init()
+const localStorageIngredients = JSON.parse(localStorage.getItem('Ingredients'))
+let Ingredients = localStorage.getItem('Ingredients') !== null ? localStorageIngredients : []
+
+const localStorageProduct = JSON.parse(localStorage.getItem('@Product'))
+let Product = localStorage.getItem('@Product') == null ? localStorageProduct : ''
+
+const updateDom = itens => {
+    var trEL = document.createElement('tr')
+    let tags = `
+        <td>${itens.id}</td>
+        <td>${itens.name}</td>
+        <td>${itens.amount}</td>
+        <td><button id="${itens.id}"><i class="fas fa-trash"></i> </button></td>
+        `
+    trEL.innerHTML = tags
+    tbodyEl.appendChild(trEL)
+}
+const updateDomProduct = () => {
+    const thEL = document.createElement('tr')
+    const result = JSON.parse(localStorage.getItem('@Product'))
+    if (result != null) {
+        let tag = `<th>${result.name}</th>`
+        thEL.innerHTML = tag
+        tHead.appendChild(thEL)
+    }
 }
 
-const addTransationIntoDOM = transation => {
-    const operator = transation.amount < 0 ? '-' : '+'
-    const CSSClass = transation.amount < 0 ? 'minus' : 'plus'
-    const amountWithoutOperator = Math.abs(transation.amount)
-
-    const li = document.createElement('li')
-    li.classList.add(CSSClass)
-
-    var tags = `${transation.name} <span>${operator}R$ ${amountWithoutOperator}</span>
-    <button class="delete-btn" onClick="removeTransation(${transation.id})"> x </button>`
-
-    li.innerHTML = tags
-    transationUl.appendChild(li)
+function start() {
+    tbodyEl.innerHTML = ''
+    tHead.innerHTML = ''
+    Ingredients.forEach(updateDom)
+    updateDomProduct(Product)
 }
 
-const updateBalenceValues = () => {
-    const transationsAmounts = transations
-        .map(transation => transation.amount)
-    const total = transationsAmounts
-        .reduce((accumulator, transation) => accumulator + transation, 0)
-        .toFixed(2)
-    const income = transationsAmounts
-        .filter(value => value > 0)
-        .reduce((accumulator, transation) => accumulator + transation, 0)
-        .toFixed(2)
-    const expense = Math.abs(transationsAmounts
-        .filter(value => value < 0)
-        .reduce((accumulator, transation) => accumulator + transation, 0))
-        .toFixed(2)
-    balanceDisplay.textContent = `${total}`
-    incomeDisplay.textContent = `${income}`
-    expenseDisplay.textContent = `${expense}`
-
+start()
+const updateLocalStorageIngredient = () => {
+    localStorage.setItem('Ingredients', JSON.stringify(Ingredients))
+}
+const updateLocalStorageProduct = item => {
+    localStorage.setItem('@Product', JSON.stringify(item))
 }
 
-const init = () => {
-    transationUl.innerHTML = ''
-    transations.forEach(addTransationIntoDOM)
-    updateBalenceValues()
-}
-
-init()
-
-const updateLocalStorage = () => {
-    localStorage.setItem('transations', JSON.stringify(transations))
-}
-
-const generateID = () => Math.round(Math.random() * 1000)
-
-form.addEventListener('submit', event => {
+formIngredient.addEventListener('submit', event => {
     event.preventDefault()
-    const transationName = inputTransationName.value.trim()
-    const transationAmount = inputTransationAmount.value.trim()
-
-    if (transationName === '' || transationAmount === '') {
+    const ingredientName = inputName.value
+    const ingredientAmount = inputAmount.value
+    if (ingredientName === '' || ingredientAmount === '') {
         alert('campos vazios')
         return
     }
+    const ingredient = { id: id(), name: ingredientName, amount: Number(ingredientAmount) }
+    Ingredients.push(ingredient)
+    start()
+    updateLocalStorageIngredient()
+    ingredientName.innerHTML = ''
+    ingredientAmount.innerHTML = ''
+})
 
-    const transation = {
-        id: generateID(),
-        name: transationName,
-        amount: Number(transationAmount)
+formProduct.addEventListener('submit', event => {
+    event.preventDefault()
+    const productValue = inputProduct.value
+    if (productValue === '') {
+        alert('campo vazio')
+        return
     }
-    transations.push(transation)
-    init()
-    updateLocalStorage()
-
-    inputTransationName = ''
-    inputTransationAmount = ''
+    const result = { id: id(), name: productValue }
+    updateLocalStorageProduct(result)
+    start()
+    productValue = ''
 })
