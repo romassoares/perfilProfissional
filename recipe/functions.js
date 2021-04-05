@@ -6,6 +6,7 @@ const inputAmount = document.querySelector('#amountInput')
 const inputPrice = document.querySelector('#priceInput')
 const tbodyEl = document.querySelector('#tbody')
 const tHead = document.querySelector('#trHead')
+const tdReport = document.querySelector('#tdReport')
 
 const id = () => { return Number(Math.abs(Math.random()).toFixed(2)) }
 
@@ -14,12 +15,6 @@ let Ingredients = localStorage.getItem('Ingredients') !== null ? localStorageIng
 
 const localStorageProduct = JSON.parse(localStorage.getItem('@Product'))
 let Product = localStorage.getItem('@Product') == null ? localStorageProduct : ''
-
-function tot() {
-    const reportUl = document.querySelector('#tdReport')
-    // let t = Ingredients.reduce((tot, atual) => tot + atual.price)
-    // reportUl.innerHTML = t
-}
 
 const updateDom = itens => {
     var trEL = document.createElement('tr')
@@ -43,21 +38,39 @@ const updateDomProduct = () => {
     }
 }
 
+function updateDomTot(tot) {
+    const pEl = document.createElement('p')
+    pEl.classList = ('tot')
+    pEl.innerText = 'total revenue amount  R$ ' + tot
+    tdReport.appendChild(pEl)
+}
+
 function start() {
     tbodyEl.innerHTML = ''
     tHead.innerHTML = ''
+    tdReport.innerHTML = ''
     Ingredients.forEach(updateDom)
     updateDomProduct(Product)
 }
 
-tot()
 start()
+window.onload = function () {
+    let totPrice = JSON.parse(localStorage.getItem('@tot'))
+    const total = totPrice === null ? '0' : totPrice
+    updateDomTot(total)
+};
 
 const updateLocalStorageIngredient = () => {
     localStorage.setItem('Ingredients', JSON.stringify(Ingredients))
 }
 const updateLocalStorageProduct = item => {
     localStorage.setItem('@Product', JSON.stringify(item))
+}
+const updateLocalStorageTot = item => {
+    let totPrice = JSON.parse(localStorage.getItem('@tot'))
+    const total = totPrice === null ? item : Number(totPrice) + Number(item)
+    updateDomTot(total)
+    localStorage.setItem('@tot', JSON.stringify(total))
 }
 
 formIngredient.addEventListener('submit', event => {
@@ -69,6 +82,7 @@ formIngredient.addEventListener('submit', event => {
         alert('campos vazios')
         return
     }
+    updateLocalStorageTot(ingredientPrice)
     const ingredient = { id: id(), name: ingredientName, price: Number(ingredientPrice), amount: Number(ingredientAmount) }
     Ingredients.push(ingredient)
     start()

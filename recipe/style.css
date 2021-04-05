@@ -91,6 +91,11 @@ th,td{
   text-align: center;
   padding: 7px;
 }
+.tot{
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 @media screen and (max-width: 880px) {
   .space-1, .space-2{
     width: 100%;
