@@ -23,7 +23,7 @@ const updateDom = itens => {
         <td>${itens.name}</td>
         <td>${itens.price}</td>
         <td>${itens.amount}</td>
-        <td><button onClick="deleteItem(${itens.id})"><i class="fas fa-trash"></i> </button></td>
+        <td><button class="btnRemove" onClick="deleteItem(${itens.id})"><i class="fas fa-trash"></i> </button></td>
         `
     trEL.innerHTML = tags
     tbodyEl.appendChild(trEL)
@@ -37,6 +37,11 @@ const updateDomProduct = () => {
         tHead.appendChild(thEL)
     }
 }
+function open() {
+    let totPrice = JSON.parse(localStorage.getItem('@tot'))
+    const total = totPrice === null ? '0' : totPrice
+    updateDomTot(total)
+};
 
 function updateDomTot(tot) {
     const pEl = document.createElement('p')
@@ -51,14 +56,10 @@ function start() {
     tdReport.innerHTML = ''
     Ingredients.forEach(updateDom)
     updateDomProduct(Product)
+    open()
 }
 
 start()
-window.onload = function () {
-    let totPrice = JSON.parse(localStorage.getItem('@tot'))
-    const total = totPrice === null ? '0' : totPrice
-    updateDomTot(total)
-};
 
 const updateLocalStorageIngredient = () => {
     localStorage.setItem('Ingredients', JSON.stringify(Ingredients))
@@ -71,6 +72,17 @@ const updateLocalStorageTot = item => {
     const total = totPrice === null ? item : Number(totPrice) + Number(item)
     updateDomTot(total)
     localStorage.setItem('@tot', JSON.stringify(total))
+}
+const updateLocalStorageTotRemove = id => {
+    const result = Ingredients.find(element => element.id == id)
+    if (result) {
+        let totPrice = JSON.parse(localStorage.getItem('@tot'))
+        const total = totPrice === null ? item : Number(totPrice) - result.price
+        updateDomTot(total)
+        localStorage.setItem('@tot', JSON.stringify(total))
+    } else {
+        alert('item não encontrado')
+    }
 }
 
 formIngredient.addEventListener('submit', event => {
@@ -106,7 +118,9 @@ formProduct.addEventListener('submit', event => {
 })
 
 function deleteItem(ID) {
+    updateLocalStorageTotRemove(ID)
     Ingredients = Ingredients.filter(ingredient => ingredient.id != ID)
     start()
     updateLocalStorageIngredient()
 }
+

@@ -91,6 +91,12 @@ th,td{
   text-align: center;
   padding: 7px;
 }
+.btnRemove{
+  background-color: var(--c);
+  color: var(--f);
+  border: none;
+  padding: 8px;
+}
 .tot{
   font-size: 18px;
   font-weight: bold;
