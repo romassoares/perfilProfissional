@@ -32,7 +32,7 @@ const updateDomProduct = () => {
     const thEL = document.createElement('tr')
     const result = JSON.parse(localStorage.getItem('@Product'))
     if (result != null) {
-        let tag = `<th>${result.name}</th>`
+        let tag = `<th colspan="5">${result.name}</th>`
         thEL.innerHTML = tag
         tHead.appendChild(thEL)
     }
@@ -46,7 +46,7 @@ function open() {
 function updateDomTot(tot) {
     const pEl = document.createElement('p')
     pEl.classList = ('tot')
-    pEl.innerText = 'total revenue amount  R$ ' + tot
+    pEl.innerText = 'list value  R$ ' + tot
     tdReport.appendChild(pEl)
 }
 

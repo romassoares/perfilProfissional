@@ -91,6 +91,9 @@ th,td{
   text-align: center;
   padding: 7px;
 }
+th{
+  text-transform: uppercase;
+}
 .btnRemove{
   background-color: var(--c);
   color: var(--f);

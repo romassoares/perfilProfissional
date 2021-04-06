@@ -11,12 +11,12 @@
 
     <body>
         <nav>
-            <h2>How much does my recipe cost</h2>
+            <h2>Shopping list</h2>
         </nav>
         <div class="body">
             <div class="space-1">
                 <div class="card">
-                    <div class="title">Form Product</div>
+                    <div class="title">Name list</div>
                     <div class="body">
                         <form id="productForm">
                             <div class="form-group">
@@ -26,7 +26,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="title">Ingredients</div>
+                    <div class="title">Items</div>
                     <div class="body">
                         <form id="ingredients">
                             <div class="form-group">
@@ -48,10 +48,17 @@
             </div>
             <div class="space-2">
                 <div class="card">
-                    <div class="title">Ingredients</div>
+                    <div class="title">list of items</div>
                     <div class="body">
                         <div id="tdReport"></div>
                         <table>
+                            <tr>
+                                <th>#</th>
+                                <th>name</th>
+                                <th>price</th>
+                                <th>amount</th>
+                                <th>actions</th>
+                            </tr>
                             <tr id="trHead">
                             </tr>
                             <tbody id="tbody">
