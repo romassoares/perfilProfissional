@@ -39,7 +39,7 @@
     background: var(--c);
     display: block;
     padding: 20px;
-    height: 100%;
+    height: max-content;
 }
 body{
     font-family: monospace;
