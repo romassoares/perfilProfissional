@@ -29,15 +29,10 @@ const squeresUl = document.querySelector('#squares')
 for (let i = 0; i < 10; i++) {
 
     const li = document.createElement("li");
-
     const random = (min, max) => Math.random() * (max - min) + min
-
     const size = Math.floor(random(10, 120))
-
     const position = random(1, 89)
-
     const delay = random(4, 0.1)
-
     const duration = random(24, 12)
 
     li.style.width = `${size}px`
@@ -47,9 +42,6 @@ for (let i = 0; i < 10; i++) {
     li.style.animationDelay = `${delay}s`
     li.style.animationDuration = `${duration}s`
     li.style.animationTimingFunction = `cubic-buzier(${Math.random()},${Math.random()},${Math.random()},${Math.random()},${Math.random()}  )`
-
-
-    // console.log(li, i, 'dsfasd')
 
     squeresUl.appendChild(li);
 }

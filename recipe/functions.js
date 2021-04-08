@@ -32,7 +32,7 @@ const updateDomProduct = () => {
     const thEL = document.createElement('tr')
     const result = JSON.parse(localStorage.getItem('@Product'))
     if (result != null) {
-        let tag = `<th colspan="5">${result.name}</th>`
+        let tag = `<p style="font-size: 22px; font-weight: bold; margin: 8px">${result.name}</p>`
         thEL.innerHTML = tag
         tHead.appendChild(thEL)
     }

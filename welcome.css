@@ -16,6 +16,7 @@
 #squares li{
     position: relative;
     display: block;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.15);
     animation: squares 3s infinite alternate;
 }
@@ -38,6 +39,7 @@
     background: var(--c);
     display: block;
     padding: 20px;
+    height: 100%;
 }
 body{
     font-family: monospace;
