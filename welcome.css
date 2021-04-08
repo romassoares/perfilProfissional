@@ -77,6 +77,7 @@ body{
     margin: 5px;
     flex-wrap: wrap;
     height: auto;
+    cursor: pointer;
 }
 .skill:hover{
     animation: trem 300ms;
@@ -150,6 +151,7 @@ margin: 3px;
 .fin .btnFin:hover{
     background: var(--c);
     color: #9c9b9b;
+    cursor: pointer;
 }
 .fin .btnFin{
     text-align: center;
