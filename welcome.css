@@ -26,7 +26,7 @@
         opacity: 0;
     }
     50%{
-        opacity: 1;
+        opacity: 0.5;
     }
     to{
         transform: translateY(-1000px) rotate(980deg);
@@ -52,10 +52,8 @@ body{
 .my #divImg{
     width: 150px;
     height: auto;
-    /* float: right; */
 }
 .my .contact{
-    /* float: right; */
     padding: 5px;
 }
 .my #txtNav{
@@ -79,7 +77,8 @@ body{
     height: auto;
 }
 .skill:hover{
-    animation: trem 200ms ;
+    animation: trem 300ms;
+    animation-delay: .10s;
 }
 @keyframes trem{
     0%{
@@ -87,6 +86,7 @@ body{
     }
     25%{
         transform: translateY(-15%);
+        transform: rotate3d(0, 1, 0, 30deg);
     }
     50%{
         transform: translateY(15%);
@@ -103,12 +103,15 @@ body{
 .skill .calculator .bodyCalculator{
     display: flex;
     flex-wrap: wrap;
+    background-color: var(--e);
 }
 .skill .calculator label{
     font-size: 17px;
     text-align: center;
-    color: var(--c);
+    color: var(--d);
+    background-color: var(--e);
     padding: 5px;
+
 }
 .skill .calculator  #result{
     font-size: 20px;
@@ -121,6 +124,7 @@ body{
     padding: 5px;
     border: none;
     border-radius: 5px;
+    background-color: white;
 }
 .skill .calculator .bodyCalculator .btn{
     background-color: var(--d);
@@ -128,6 +132,7 @@ body{
     color: var(--e);
     padding: 5px;
     border: none;
+margin: 3px;
     border-radius: 5px;
 }
 .skill .calculator .bodyCalculator .btn:hover{
@@ -164,7 +169,6 @@ nav{
 }
 nav .logo{
     font-size: 35px;
-    /* line-height: 80px; */
     padding-left: 30px;
     font-weight: bold;
 }
@@ -186,11 +190,12 @@ nav li a{
     border-radius: 5px;
     background: var(--c);
     color: var(--e);
+    transition: border-bottom .4s;
 }
 nav li a.active,a:hover {
     background: var(--e);
     color: var(--c);
-    transition: .6s;
+    border-bottom: 6px solid var(--b);
 }
 .checkbtn{
     font-size: 30px;
@@ -203,7 +208,7 @@ nav li a.active,a:hover {
 #check{
     display: none;
 }
-@media (max-width: 958px) {
+ @media (max-width: 958px) {
    nav .logo{
        font-size: 30px;
        padding-left: 50px;
@@ -247,5 +252,3 @@ nav li a.active,a:hover {
         flex-direction: column;
     }
 }
-
-
