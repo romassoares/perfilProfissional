@@ -217,9 +217,12 @@ nav li a.active,a:hover {
        font-size: 30px;
        padding-left: 50px;
    }
-   /* nav li a{
-       font-size: 16px;
-   } */
+   .row{
+    flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
    .skillWithTechnologies{
         display: block;
     }
@@ -231,6 +234,7 @@ nav li a.active,a:hover {
     .checkbtn{
         display: block;
     }
+    
     ul{
         position: fixed;
         background: var(--c);
@@ -255,4 +259,46 @@ nav li a.active,a:hover {
     .skill{
         flex-direction: column;
     }
+    .row{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.container .title{
+    display: flex;
+    justify-content: center;
+}
+.container .text-about{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid violet;
+}
+.card .card-icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.card .card-icon i{
+    font-size: 59px;
+    color: white;
+}
+.card .card-desc{
+    font-size: 17px;
+    text-align: center;
+    margin-top: 10px;
 }
