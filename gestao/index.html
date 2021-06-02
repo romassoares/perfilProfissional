@@ -4,49 +4,61 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="financeiro.css" />
-        <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
         <title>Controle de despesas</title>
+        <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="stylesheet" href="../style/main.css" />
     </head>
 
     <body>
-        <a onclick='window.history.back();' style="width: 10%; text-align: center; padding: 3px;">
-            <div style="padding: 5px; font-size: 22px; cursor: pointer; color:#000000"
-                onmouseout="this.style.background= 'none'" onmouseover="this.style.background= '#cccccc'">
-                <i class="fas fa-arrow-left"></i>
-            </div>
-        </a>
-        <h2>Controle de despesas</h2>
+        <header>
+            <nav>
+                <a onclick='window.history.back();' style="width: 10%; text-align: center; padding: 3px;">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h2>Controle de despesas</h2>
+            </nav>
+        </header>
         <div class="container">
-            <h4>Saldo atual</h4>
-            <h1 id="balance" class="balance">R$ 0.00</h1>
-            <div class="inc-exp-container">
-                <div>
-                    <h4>Receitas</h4>
-                    <p id="money-plus" class="money plus">+ R$0.00</p>
-                </div>
-                <div>
-                    <h4>Despesas</h4>
-                    <p id="money-minus" class="money minus">- R$0.00</p>
+            <div class="row">
+                <div class="saldo">
+                    <h4>Saldo atual</h4>
+                    <h1 id="balance" class="balance">R$ 0.00</h1>
                 </div>
             </div>
-            <h3>Transações</h3>
-            <ul id="transactions" class="transactions">
-            </ul>
-            <h3>Adicionar transação</h3>
-            <form id="form">
-                <div class="form-control">
-                    <label for="text">Nome</label>
-                    <input autofocus type="text" id="text" placeholder="Nome da transação" />
+            <div class="row">
+                <div class="card">
+                    <div class="col center">
+                        <h4>Receitas</h4>
+                        <p id="money-plus" class="money plus">+ R$0.00</p>
+                    </div>
+                    <div class="col center">
+                        <h4>Despesas</h4>
+                        <p id="money-minus" class="money minus">- R$0.00</p>
+                    </div>
                 </div>
-                <div class="form-control">
-                    <label for="amount">Valor <br />
-                        <small>(negativo -> despesas, positivo -> receitas)</small>
-                    </label>
-                    <input type="number" id="amount" placeholder="Valor da transação" />
-                </div>
-                <button class="btn">Adicionar</button>
-            </form>
+            </div>
+            <div class=" center">
+                <h3 class="title">Transações</h3>
+                <ul id="transactions" class="transactions">
+                </ul>
+            </div>
+            <div class="center">
+                <h3 class="title">Adicionar transação</h3>
+                <form id="form">
+                    <div class="form-control">
+                        <label for="text">Nome</label>
+                        <input autofocus type="text" id="text" placeholder="Nome da transação" />
+                    </div>
+                    <div class="form-control">
+                        <label for="amount">Valor <br />
+                            <small>(negativo -> despesas, positivo -> receitas)</small>
+                        </label>
+                        <input type="number" id="amount" placeholder="Valor da transação" />
+                    </div>
+                    <button class="btn">Adicionar</button>
+                </form>
+            </div>
         </div>
         <script src="functions.js"></script>
     </body>

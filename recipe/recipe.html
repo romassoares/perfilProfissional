@@ -4,25 +4,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
         <title>Recipe</title>
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <nav>
-            <h2>Shopping list</h2>
-        </nav>
-        <a onclick='window.history.back();' style="width: 10%; text-align: center; float: left;">
-            <div style="padding: 5px; font-size: 22px; cursor: pointer; color:#000000"
-                onmouseout="this.style.background= 'none'" onmouseover="this.style.background= '#cccccc'">
-                <i class="fas fa-arrow-left"></i>
-            </div>
-        </a>
+        <header>
+            <nav>
+                <a onclick='window.history.back();'>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h2>Shopping list</h2>
+            </nav>
+        </header>
         <div class="body">
-            <div class="space-1">
+            <div class="col">
                 <div class="card">
-                    <div class="title">Name list</div>
+                    <div class="title">list Name </div>
                     <div class="body">
                         <form id="productForm">
                             <div class="form-group">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="space-2">
+            <div class="col">
                 <div class="card">
                     <div class="title">list of items</div>
                     <div class="body">

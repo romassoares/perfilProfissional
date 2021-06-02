@@ -1,11 +1,11 @@
 :root {
-    --a: #665F5C;
-    --b: #996E5C;
+    --a: #665f5c;
+    --b: #996e5c;
     --c: #333333;
     --d: #304030;
-    --e: #5F665C;
+    --e: #5f665c;
 }
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     background-color: var(--c);
 }
-#squares li{
+#squares li {
     position: relative;
     display: block;
     border-radius: 5px;
@@ -21,56 +21,56 @@
     animation: squares 3s infinite alternate;
 }
 
-@keyframes squares{
-    from{
+@keyframes squares {
+    from {
         transform: translateY(0);
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 0.5;
     }
-    to{
+    to {
         transform: translateY(-1000px) rotate(980deg);
         opacity: 0;
     }
 }
 
-.container{
+.container {
     background: var(--c);
     display: block;
     padding: 20px;
     height: max-content;
 }
-body{
+body {
     font-family: monospace;
     color: var(--e);
 }
 /* *********************************************************************************** */
-.my{
+.my {
     width: 100%;
     text-align: center;
     display: inline-block;
 }
-.my #divImg{
+.my #divImg {
     width: 150px;
     height: auto;
 }
-.my .contact{
+.my .contact {
     padding: 5px;
 }
-.my #txtNav{
+.my #txtNav {
     text-align: center;
     font-size: 21px;
 }
-.my #fun{
+.my #fun {
     font-size: 17px;
     text-align: center;
 }
 /* *********************************************************************************** */
-.skillWithTechnologies{
+.skillWithTechnologies {
     display: flex;
 }
-.skill{
+.skill {
     background-color: var(--e);
     padding: 5px;
     width: 50%;
@@ -79,48 +79,47 @@ body{
     height: auto;
     cursor: pointer;
 }
-.skill:hover{
+.skill:hover {
     animation: trem 300ms;
-    animation-delay: .10s;
+    animation-delay: 0.1s;
 }
-@keyframes trem{
-    0%{
+@keyframes trem {
+    0% {
         transform: translateY(0);
     }
-    25%{
+    25% {
         transform: translateY(-15%);
         transform: rotate3d(0, 1, 0, 30deg);
     }
-    50%{
+    50% {
         transform: translateY(15%);
     }
-    100%{
+    100% {
         transform: translateY(0);
     }
 }
 /* *********************************************************************************** */
-.skill .calculator{
+.skill .calculator {
     text-align: center;
     background-color: var(--e);
 }
-.skill .calculator .bodyCalculator{
+.skill .calculator .bodyCalculator {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--e);
 }
-.skill .calculator label{
+.skill .calculator label {
     font-size: 17px;
     text-align: center;
     color: var(--d);
     background-color: var(--e);
     padding: 5px;
-
 }
-.skill .calculator  #result{
+.skill .calculator #result {
     font-size: 20px;
     color: yellowgreen;
 }
-.skill .calculator .bodyCalculator .inputCalc{
+.skill .calculator .bodyCalculator .inputCalc {
     margin: 3px;
     font-size: 17px;
     width: calc(50% - 8px);
@@ -129,31 +128,31 @@ body{
     border-radius: 5px;
     background-color: white;
 }
-.skill .calculator .bodyCalculator .btn{
+.skill .calculator .bodyCalculator .btn {
     background-color: var(--d);
     font-size: 17px;
     color: var(--e);
     padding: 5px;
     border: none;
-margin: 3px;
+    margin: 3px;
     border-radius: 5px;
 }
-.skill .calculator .bodyCalculator .btn:hover{
+.skill .calculator .bodyCalculator .btn:hover {
     color: #9c9b9b;
 }
 /* ************************************************************************************ */
-.fin{
+.fin {
     text-align: center;
     padding: 10px;
     margin: 20px;
     background: var(--e);
 }
-.fin .btnFin:hover{
+.fin .btnFin:hover {
     background: var(--c);
     color: #9c9b9b;
     cursor: pointer;
 }
-.fin .btnFin{
+.fin .btnFin {
     text-align: center;
     font-size: 17px;
     border: none;
@@ -163,7 +162,7 @@ margin: 3px;
     color: var(--e);
 }
 /* ************************************************************************************ */
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,21 +170,21 @@ nav{
     padding: 0 10px;
     border-bottom: solid 0.5px var(--e);
 }
-nav .logo{
+nav .logo {
     font-size: 35px;
     padding-left: 30px;
     font-weight: bold;
 }
-nav ul{
+nav ul {
     float: left;
     margin-right: 20px;
 }
-nav li{
+nav li {
     display: inline-block;
     margin: 0 5px;
     margin: 30px 10px;
 }
-nav li a{
+nav li a {
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
@@ -194,14 +193,15 @@ nav li a{
     border-radius: 5px;
     background: var(--c);
     color: var(--e);
-    transition: border-bottom .4s;
+    transition: border-bottom 0.4s;
 }
-nav li a.active,a:hover {
+nav li a.active,
+a:hover {
     background: var(--e);
     color: var(--c);
     border-bottom: 6px solid var(--b);
 }
-.checkbtn{
+.checkbtn {
     font-size: 30px;
     float: right;
     line-height: 75px;
@@ -209,77 +209,78 @@ nav li a.active,a:hover {
     cursor: pointer;
     display: none;
 }
-#check{
+#check {
     display: none;
 }
- @media (max-width: 958px) {
-   nav .logo{
-       font-size: 30px;
-       padding-left: 50px;
-   }
-   .row{
-    flex-direction: column;
+@media (max-width: 958px) {
+    nav .logo {
+        font-size: 30px;
+        padding-left: 50px;
     }
-    .card{
+    .row {
+        flex-direction: column;
+    }
+    .card {
         width: 100%;
     }
-   .skillWithTechnologies{
+    .skillWithTechnologies {
         display: block;
     }
-    .skill{
+    .skill {
         width: 100%;
     }
 }
-@media (max-width: 858px){
-    .checkbtn{
+@media (max-width: 858px) {
+    .checkbtn {
         display: block;
     }
-    
-    ul{
+
+    ul {
         position: fixed;
         background: var(--c);
         top: 0px;
         left: -100vw;
         text-align: center;
-        transition: all .5s;
+        transition: all 0.5s;
     }
     nav ul li {
         display: block;
         line-height: 30px;
     }
-    nav ul li a{
+    nav ul li a {
         font-size: 12px;
     }
-    nav li a:hover, a.active{
+    nav li a:hover,
+    a.active {
         background: var(--e);
     }
-    #check:checked ~ ul{
+    #check:checked ~ ul {
         left: 0;
     }
-    .skill{
+    .skill {
         flex-direction: column;
     }
-    .row{
+    .row {
         flex-direction: column;
     }
-    .card{
+    .card {
         width: 100%;
     }
 }
-.row{
+.row {
     display: flex;
     flex-direction: row;
 }
-.container .title{
+.container .title {
     display: flex;
     justify-content: center;
 }
-.container .text-about{
+.container .text-about {
     text-align: center;
     margin-top: 15px;
     font-size: 17px;
 }
-.card{
+.card {
     display: flex;
     flex-direction: column;
     max-width: 250px;
@@ -288,16 +289,16 @@ nav li a.active,a:hover {
     margin: 5px;
     border: 1px solid violet;
 }
-.card .card-icon{
+.card .card-icon {
     display: flex;
     justify-content: center;
     margin-top: 40px;
 }
-.card .card-icon i{
+.card .card-icon i {
     font-size: 59px;
     color: white;
 }
-.card .card-desc{
+.card .card-desc {
     font-size: 17px;
     text-align: center;
     margin-top: 10px;
