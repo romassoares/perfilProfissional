@@ -33,26 +33,29 @@
 }
 i {
     font-size: 1.5rem;
+    color: $color5;
 }
 .backgroundColor {
-    background-color: rgba($color1, 0.8);
+    background-color: $color3;
     padding-top: 10px;
 }
 // main
 .title-background {
-    background-color: $color1;
-    color: $color5;
+    background-color: $color4;
+    color: $color2;
     width: 100%;
 }
 
 .body {
     display: flex;
     width: 100%;
+    font-size: 1.25rem;
 }
 p {
     line-height: 25px;
 }
 nav,
 footer {
-    background-color: #2f22bf;
+    background-color: $color4;
+    color: $color2;
 }

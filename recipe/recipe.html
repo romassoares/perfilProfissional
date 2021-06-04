@@ -12,53 +12,58 @@
 
     <body>
         <header>
-            <nav>
+            <nav class=" p-3">
                 <a onclick='window.history.back();'>
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 <h2>Shopping list</h2>
             </nav>
         </header>
-        <div class="body">
-            <div class="col">
-                <div class="card">
-                    <div class="title">list Name </div>
-                    <div class="body">
+
+        <main>
+            <div class="body">
+                <div class="row p-3">
+                    <div class="col">
+                        <div class="row">
+                            <div class="title">list Name </div>
+                        </div>
                         <form id="productForm">
-                            <div class="form-group">
+                            <div class="form-control">
                                 <label for="">Description</label>
                                 <input type="text" id="productInput">
-                                <button>to save</button>
                             </div>
+                            <button>to save</button>
                         </form>
                     </div>
-                    <div class="title">Items</div>
-                    <div class="body">
+                    <div class="col">
+                        <div class="row">
+                            <div class="title">Items</div>
+                        </div>
                         <form id="ingredients">
-                            <div class="form-group">
+                            <div class="form-control">
                                 <label for="">Name</label>
                                 <input type="text" id="nameInput">
                             </div>
-                            <div class="form-group">
+                            <div class="form-control">
                                 <label for="">Price</label>
                                 <input type="text" id="priceInput">
                             </div>
-                            <div class="form-group">
+                            <div class="form-control">
                                 <label for="">Amount</label>
                                 <input type="text" id="amountInput">
-                                <button>to save</button>
                             </div>
+                            <button>to save</button>
                         </form>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="title">list of items</div>
-                    <div class="body">
-                        <div id="trHead"></div>
+                <div class="col p-3">
+                    <div class="col">
                         <div id="tdReport"></div>
-                        <table>
+                        <div id="trHead"></div>
+                    </div>
+                    <div class="col">
+                        <div class="title">list of items</div>
+                        <table class="table-responsive">
                             <tr>
                                 <th>#</th>
                                 <th>name</th>
@@ -72,8 +77,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="functions.js"></script>
+        </main>
+        <footer class="p-3">
+            <p>@copyright</p>
+        </footer>
     </body>
+    <script src="functions.js"></script>
 
 </html>
