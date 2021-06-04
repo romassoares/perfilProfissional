@@ -9,9 +9,26 @@ body {
     display: flex;
     flex-direction: column;
 }
+main {
+    width: 100%;
+    padding: 10px;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
 .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .col {
     display: flex;
@@ -34,6 +51,21 @@ body {
 ul {
     list-style-type: none;
     padding: 3px;
+}
+.p-1 {
+    padding: 1.5px;
+}
+.p-2 {
+    padding: 3px;
+}
+.p-3 {
+    padding: 6px;
+}
+.p-4 {
+    padding: 12px;
+}
+.p-5 {
+    padding: 24px;
 }
 @import "basic";
 @import "recipe";

@@ -4,206 +4,183 @@
     <meta charset="utf-8">
     <meta http-equiv="content-language" content="pt-br, en-US" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Perfil Profissional desenvolvedor Full Stack">
+    <meta name="description" content="Perfil Profissional desenvolvedor Full Stack jr.">
     <meta name="author" content="Antonio Romario">
     <meta name="copyright" content="© 2021 Antonio Romario" />
     <meta name="keywords" content="perfil Profissional, dev back-end , dev front-end">
-    <title>Antonio Romario</title>
+    <title>Antonio Romario - Dev. Jr.</title>
     <!-- Bootstrap core CSS -->
     <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
     <!-- Favs -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="stylesheet" href="../style/main.css">
     <script src="../api.js"></script>
+    <script>
+      usersGit()
+    </script>
   </head>
-  <script>
-
-    usersGit()
-  </script>
 
   <body>
-    <div class="container">
-      <div class="space-1">
-        <a onclick='window.history.back();' style="width: 10%; text-align: center; padding: 3px;">
-          <div style="padding: 5px; font-size: 22px; cursor: pointer; color:#ffffff"
-            onmouseout="this.style.background= '#6495ed'" onmouseover="this.style.background= '#6386de'">
-            <i class="fas fa-arrow-left"></i>
-          </div>
+    <header>
+      <nav>
+        <a onclick='window.history.back()'>
+          <i class="fas fa-arrow-left"></i>
         </a>
+        <h2>Page Profile</h2>
+      </nav>
+    </header>
+    <div class="body">
+      <aside>
+        <div class="userGit">
+          <div class="divImg">
+            <img id="divImg" alt="">
+          </div>
+          <div id="txtNav"></div>
+          <strong>
+            <p id="fun"></p>
+          </strong>
+        </div>
+
         <div class="row">
-          <div class="nav">
-            <div class="divImg">
-              <img id="divImg" alt="">
-            </div>
-            <div class="divName">
-              <div id="txtNav"></div>
-            </div>
-            <h3 id="fun"></h3>
+          <p class="title title-background">Contact</p>
+        </div>
+        <div class="row">
+          <div class="items-aside">
+            <a href="https://wa.me/5586981332085" target=" _blank">
+              <i class="fab fa-whatsapp"></i>
+              <span>(86)98133-2085</span>
+            </a>
           </div>
-          <div class="col-2">
-            <div class="col">
-              <p class="title">Contact</p>
-              <div class="contact">
-                <div class="item">
-                  <a href="https://wa.me/5586981332085" style="text-decoration: none; color: #ffffff;" target=" _blank">
-                    <i class="fab fa-whatsapp icon"></i>
-                    <p>(86)98133-2085</p>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="www.linkedin.com/in/romario-soares-5a1030193
-                  " target="blank" style="text-decoration: none; color: #ffffff; ">
-                    <i class="fab fa-linkedin icon"></i>
-                    <p>Linkedin</p>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="mailto:anotonioromas@gmail.com" target="blank" style="color: #ffffff;text-decoration: none">
-                    <i class="far fa-envelope icon"></i>
-                    <p>gmail </p>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="https://github.com/romassoares" target="_blank"
-                    style="color: #ffffff;text-decoration: none;">
-                    <i class="fab fa-github icon"></i>
-                    <p>github</p>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="items-aside">
+            <a href="www.linkedin.com/in/romario-soares-5a1030193" target="blank">
+              <i class=" fab fa-linkedin"></i>
+              <span>Linkedin</span>
+            </a>
+          </div>
+          <div class="items-aside">
+            <a href="mailto:anotonioromas@gmail.com" target="blank">
+              <i class="far fa-envelope"></i>
+              <span>gmail </span>
+            </a>
+          </div>
+          <div class="items-aside">
+            <a href="https://github.com/romassoares" target="_blank">
+              <i class="fab fa-github"></i>
+              <span>github</span>
+            </a>
+          </div>
+        </div>
 
-            <div class="col">
-              <p class="title">Skills</p>
-              <div class="contact">
-                <div class="item">
-                  <a href="#" style="color: #ffffff;text-decoration: none">
-                    <i class="fab fa-php icon"></i>
-                    <!-- <p> php</p> -->
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#" style="color: #ffffff;text-decoration: none">
-                    <i class="fab fa-js icon"></i>
-                    <!-- <p> javascript </p> -->
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#" style="color: #ffffff;text-decoration: none">
-                    <i class="fab fa-html5 icon"></i>
-                    <!-- <p> html </p> -->
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#" style="color: #ffffff;text-decoration: none">
-                    <i class="fab fa-css3-alt icon"></i>
-                    <!-- <p> css </p> -->
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#" style="color: #ffffff;text-decoration: none">
-                    <i class="fab fa-react icon"></i>
-                    <!-- <p> ReactJs </p> -->
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div class="row">
+          <p class="title title-background">Skills</p>
+        </div>
+        <div class="row">
+          <div class="items-aside">
+            <a href="#">
+              <i class="fab fa-php"></i>
+            </a>
+          </div>
+          <div class="items-aside">
+            <a href="#">
+              <i class="fab fa-js"></i>
+            </a>
+          </div>
+          <div class="items-aside">
+            <a href="#">
+              <i class="fab fa-html5"></i>
+            </a>
+          </div>
+          <div class="items-aside">
+            <a href="#">
+              <i class="fab fa-css3-alt"></i>
+            </a>
+          </div>
+          <div class="items-aside">
+            <a href="#">
+              <i class="fab fa-react"></i>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="space-2">
-        <div class="title">
-          <h3>formação</h3>
+      </aside>
 
+      <main>
+        <div class="row">
+          <p class="title title-background">formação</p>
         </div>
-        <div class="row-2">
-          <div class="item-2">
-            <div class="text-2">
-              <p class=""><span class="bold">Instituição: </span> Bacharel em Ciências Contábeis</p>
-              <p class="">
-                <span class="bold">Cargo:</span> Faculdade Cristo Reis
-              </p>
-              <p class="">
-                <span class="bold">Período:</span> 29/12/2014
-              </p>
-            </div>
+        <div class="row">
+          <div class="col p-5">
+            <p><strong>Instituição: </strong> Bacharel em Sistemas de Informação</p>
+            <p>
+              <strong>Cargo:</strong> Universidade Federal do Piauí - UFPI
+            </p>
+            <p>
+              <strong>Período:</strong> 02/02/2021
+            </p>
           </div>
-          <div class="item-2">
-            <div class="text-2">
-              <p class="bold"></p>
-              <p class=""><span class="bold">Instituição: </span> Bacharel em Sistemas de Informação</p>
-              <p class="">
-                <span class="bold">Cargo:</span> Universidade Federal do Piauí - UFPI
-              </p>
-              <p class="">
-                <span class="bold">Período:</span> 02/02/2021
-              </p>
-            </div>
+          <div class="col p-5">
+            <p><strong>Instituição: </strong> Bacharel em Ciências Contábeis</p>
+            <p>
+              <strong>Cargo:</strong> Faculdade Cristo Reis
+            </p>
+            <p>
+              <strong>Período:</strong> 29/12/2014
+            </p>
           </div>
         </div>
-        <div class="title">
-          <h3>Experiências</h3>
+
+        <div class="row">
+          <p class="title title-background">Experiências</p>
         </div>
-        <div class="row-2">
-          <div class="item-2">
-            <div class="text-2">
-              <p class=""> <span class="bold">Empresa: </span>Vikstar Center</p>
-              <p class=""> <span class="bold">Cargo:</span> Operador de Telemarketing
-              </p>
-              <p class="">
-                <span class="bold">Período:</span> De 22-09-2014 a 26-06-2015
-              </p>
-            </div>
+        <div class="row">
+          <div class="col p-5">
+            <p> <strong>Empresa: </strong>Vikstar Center</p>
+            <p> <strong>Cargo:</strong> Operador de Telemarketing
+            </p>
+            <p>
+              <strong>Período:</strong> De 22-09-2014 a 26-06-2015
+            </p>
           </div>
-          <div class="item-2">
-            <div class="text-2">
-              <p class=""><span class="bold">Empresa: </span> Agrovila</p>
-              <p class="">
-                <span class="bold">Cargo:</span> Serviços Gerais
-              </p>
-              <p class="">
-                <span class="bold">Período:</span> 1 ano
-              </p>
-            </div>
+          <div class="col p-5">
+            <p><strong>Empresa: </strong> Agrovila</p>
+            <p>
+              <strong>Cargo:</strong> Serviços Gerais
+            </p>
+            <p>
+              <strong>Período:</strong> 1 ano
+            </p>
           </div>
         </div>
-        <div class="row-2">
-          <div class="item-2">
-            <div class="text-2">
-              <p class=""> <span class="bold">Empresa: </span>Cactos Coders</p>
-              <p class=""> <span class="bold">Cargo: </span> Desenvolvedor web
-              </p>
-              <p class="">
-                <span class="bold">Período:</span> Desde 01-11-2017
-              </p>
-            </div>
+        <div class="row">
+          <div class="col p-5">
+            <p> <strong>Empresa: </strong>Cactos Coders</p>
+            <p> <strong>Cargo: </strong> Desenvolvedor web
+            </p>
+            <p>
+              <strong>Período:</strong> Desde 01-11-2017
+            </p>
           </div>
         </div>
-        <div class="title">
-          <h3>Cursos</h3>
+
+        <div class="row">
+          <p class="title title-background">Cursos</p>
         </div>
-        <div class="row-2">
-          <div class="item-2">
-            <div class="text-2">
-              <p class=""><span class="bold">Instituição: </span> Instituto Federal do Piauí - IFPI</p>
-              <p class="">
-                <span class="bold">Curso:</span> Técnico em comércio
-              </p>
-              <p class="">
-                <span class="bold">Período:</span> 1 ano e meio
-              </p>
-            </div>
+        <div class="row">
+          <div class="col p-5">
+            <p><strong>Instituição: </strong> Instituto Federal do Piauí - IFPI</p>
+            <p>
+              <strong>Curso:</strong> Técnico em comércio
+            </p>
+            <p>
+              <strong>Período:</strong> 1 ano e meio
+            </p>
           </div>
         </div>
-      </div>
-      <div class="space-3">
-        <div class="row"></div>
-      </div>
-      <!-- ************************************************************************************* -->
+
+      </main>
     </div>
-    <div class="footer">
+    <footer class="p-3">
       <p>@copyright</p>
-    </div>
+    </footer>
   </body>
 
 </html>

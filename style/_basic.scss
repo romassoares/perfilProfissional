@@ -1,0 +1,45 @@
+.userGit {
+    .divImg {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    #txtNav,
+    #fun {
+        text-align: center;
+    }
+}
+.items-aside {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 0 auto;
+}
+.items-aside a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin: 5px;
+    text-decoration: none;
+}
+i {
+    font-size: 1.5rem;
+}
+
+// main
+.title-background {
+    background-color: cornflowerblue;
+    width: 100%;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+}
+p {
+    line-height: 25px;
+}
