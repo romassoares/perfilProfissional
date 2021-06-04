@@ -1,27 +1,23 @@
-$background: #f7f7f7;
-$color1: #2e75cc;
-$color2: #2ecc71;
-$color3: #c0392b;
 body {
-    background-color: $background;
+    background-color: $color3;
 }
 
 header {
-    nav {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        h2 {
-            padding: 15px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    color: $color5;
+    h2 {
+        padding: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-gestao {
+        background-color: $color2;
     }
 }
 .container {
     display: flex;
     flex-direction: column;
     width: 60%;
+    padding-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,13 +66,13 @@ li {
 }
 .title {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     text-align: left;
     padding: 7px;
     margin: 10px;
 }
 form {
-    padding: 20px;
+    padding: 10px;
     text-align: left;
     .form-control {
         display: flex;

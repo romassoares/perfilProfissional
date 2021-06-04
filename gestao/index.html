@@ -12,14 +12,14 @@
 
     <body>
         <header>
-            <nav>
-                <a onclick='window.history.back();' style="width: 10%; text-align: center; padding: 3px;">
+            <nav class="nav-gestao">
+                <a onclick='window.history.back();' class="p-3">
                     <i class="fas fa-arrow-left"></i>
                 </a>
                 <h2>Controle de despesas</h2>
             </nav>
         </header>
-        <div class="container">
+        <main class="container">
             <div class="row">
                 <div class="saldo">
                     <h4>Saldo atual</h4>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" center">
+            <div>
                 <h3 class="title">Transações</h3>
                 <ul id="transactions" class="transactions">
                 </ul>
@@ -59,7 +59,7 @@
                     <button class="btn">Adicionar</button>
                 </form>
             </div>
-        </div>
+        </main>
         <script src="functions.js"></script>
     </body>
 

@@ -10,6 +10,10 @@
     #txtNav,
     #fun {
         text-align: center;
+        color: $color5;
+    }
+    #txtNav {
+        font-size: 1.5rem;
     }
 }
 .items-aside {
@@ -25,14 +29,19 @@
     margin: 0 auto;
     margin: 5px;
     text-decoration: none;
+    color: $color5;
 }
 i {
     font-size: 1.5rem;
 }
-
+.backgroundColor {
+    background-color: rgba($color1, 0.8);
+    padding-top: 10px;
+}
 // main
 .title-background {
-    background-color: cornflowerblue;
+    background-color: $color1;
+    color: $color5;
     width: 100%;
 }
 
@@ -42,4 +51,8 @@ i {
 }
 p {
     line-height: 25px;
+}
+nav,
+footer {
+    background-color: #2f22bf;
 }
