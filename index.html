@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="welcome.css">
+        <title>Romas Dev Web Jr.</title>
+        <link rel="stylesheet" href="./style/main.css">
         <script src="https://kit.fontawesome.com/d7c48c440e.js" crossorigin="anonymous"></script>
         <script src="api.js"></script>
         <script>
@@ -15,146 +15,78 @@
     </head>
 
     <body>
-
-        <nav>
-            <input type="checkbox" name="" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo"> Romas </label>
-            <ul>
-                <li><a class="active" href="">know about</a></li>
-                <li><a href="">technologies</a></li>
-                <li><a href="">contacts</a></li>
-                <li><a href="">others</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="my">
-                <img id="divImg">
-                <div class="contact">
-                    <p id="txtNav"></p>
-                    <p id="fun"></p>
+        <header>
+            <nav>
+                <div class="hamburger">
+                    <input type="checkbox" name="" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <label class="logo"> Romas </label>
+                </div>
+                <div class="menu-items">
+                    <ul>
+                        <li><a class="active" href="">know about</a></li>
+                        <li><a href="">technologies</a></li>
+                        <li><a href="">contacts</a></li>
+                        <li><a href="">others</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="row">
+                <div class="card" style="background-image:url('./backgroundImage.jpg')">
+                    <div class="card-header">
+                        <img id="divImg">
+                    </div>
+                    <div class="card-body center" style="background-color: rgba(0, 0, 0, 0.3);width: 100%">
+                        <p id="txtNav"></p>
+                        <p id="fun"></p>
+                    </div>
                 </div>
             </div>
-            <div class="skillWithTechnologies">
-                <!--  -->
-                <div class="skill">
-                    <div class="calculator">
-                        <label for="">Calculator</label>
-                        <div class="bodyCalculator">
-                            <input type="number" id="one" class="inputCalc">
-                            <input type="number" id="two" class="inputCalc">
-                            <select name="op" id="op" class="inputCalc">
-                                <option value="+">+</option>
-                                <option value="-">-</option>
-                                <option value="/">/</option>
-                                <option value="*">*</option>
-                            </select>
-                            <button class="btn" onclick="calc(one,two,op)">Calculate</button>
+            <section>
+                <div class="row">
+                    <div class="col p-3 card ">
+                        <div class="card-header p-3">
+                            <label class="btn-card" for="">Calculator</label>
+                        </div>
+                        <div class="card-body">
+                            <div class="form">
+                                <input type="number" id="one" class="inputCalc">
+                                <input type="number" id="two" class="inputCalc">
+                                <select name="op" id="op" class="inputCalc">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="/">/</option>
+                                    <option value="*">*</option>
+                                </select>
+                                <button class="btn" onclick="calc(one,two,op)">Calculate</button>
+                            </div>
                         </div>
                         <div id="result"></div>
                     </div>
-                </div>
-                <!--  -->
-                <div class="skill" onClick="window.location = 'gestao/index.html'">
-                    <div class="fin">
-                        <a class="btnFin"> Financeiro</a>
+                    <div class="col p-3 card" onClick="window.location = 'gestao/index.html'">
+                        <a class="btn-card"> Financeiro</a>
+                    </div>
+                    <div class="col p-3 card" onClick="window.location = 'basic/basic.html'">
+                        <div class="card-header">
+                            <a class="btn-card">Page Profile </a>
+                        </div>
+                    </div>
+                    <div class="col p-3 card" onClick="window.location = 'recipe/recipe.html'">
+                        <a class="btn-card">Recipe </a>
                     </div>
                 </div>
-                <!--  -->
-                <div class="skill" onClick="window.location = 'basic/basic.html'">
-                    <div class="fin">
-                        <a class="btnFin">Page Profile </a>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="skill" onClick="window.location = 'recipe/recipe.html'">
-                    <div class="fin">
-                        <a class="btnFin">Recipe </a>
-                    </div>
-                </div>
-                <!--  -->
-            </div>
-        </div>
-
-        <div class="container">
-            <h1 class="title">Know About</h1>
-            <p class="text-about">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo exercitationem incidunt
-                voluptas maiores a nam quis molestiae reprehenderit, autem quaerat eius quod reiciendis eligendi
-                consequatur, quos, quasi illum error?
-            </p>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <h1>technologies</h1>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-php"></i>
-                    </div>
-                    <div class="card-desc">
-                        <p>adsfasdfad fadsfa asdfasdf asdfadsfsad</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <div class="card-desc">
-                        <p>adsfasdfad fadsfa asdfasdf asdfadsfsad</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <div class="card-desc">
-                        <p>adsfasdfad fadsfa asdfasdf asdfadsfsad</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <div class="card-desc">
-                        <p>adsfasdfad fadsfa asdfasdf asdfadsfsad</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="card-desc">
-                        <p>adsfasdfad fadsfa asdfasdf asdfadsfsad</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <div class="row">
-                <h1>Know About</h1>
-            </div>
-            <div class="row">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil explicabo exercitationem incidunt
-                    voluptas maiores a nam quis molestiae reprehenderit, autem quaerat eius quod reiciendis eligendi
-                    consequatur, quos, quasi illum error?
-                </p>
-            </div>
-        </div>
-        <div
-            style="text-align: center; padding: 10px; font-size: 16px; bottom: 0; background-color: #333333; position: relative; width: 100%;">
+            </section>
+        </main>
+        <footer>
             footer
-        </div>
+        </footer>
         <ul id="squares">
         </ul>
     </body>
-    <script src="skills.js"></script>
+    <script src="cards.js"></script>
 
 </html>

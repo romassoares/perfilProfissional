@@ -21,6 +21,7 @@ const addTransationIntoDOM = transation => {
     const amountWithoutOperator = Math.abs(transation.amount)
 
     const li = document.createElement('li')
+    li.className = "li"
     li.classList.add(CSSClass)
 
     var tags = `${transation.name} <span>${operator}R$ ${amountWithoutOperator}</span>

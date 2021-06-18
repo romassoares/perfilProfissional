@@ -5,20 +5,60 @@
 }
 $box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-$color1: #665f5c;
-$color2: #996e5c;
-$color3: #333333;
-$color4: #304030;
-$color5: #5f665c;
+$color1: #4deb9f;
+$color2: #eb604d;
+$color3: #65ebab;
+$color4: #8b7ceb;
+$color5: #ebd759;
+$backGround0: #ffffff;
+$backGround1: #f8f7f7;
+$backGround2: #a8a878;
+$backGround3: #b41a78;
 
 body {
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
+    background-color: $backGround1;
 }
 nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
+    background-color: $color4;
+    padding: 15px;
+    color: black;
+    #check {
+        display: none;
+    }
+    .hamburger {
+        width: 40%;
+        font-size: 25px;
+    }
+    .menu-items {
+        width: 60%;
+        display: flex;
+        ul {
+            justify-content: space-around;
+            float: left;
+        }
+        li {
+            display: inline-block;
+            a {
+                color: black;
+                text-decoration: none;
+                padding: 10px;
+                transition: border-bottom 0.5s;
+
+                &:hover {
+                    background-color: $color1;
+                    border-radius: 5px;
+                    border-bottom: 6px solid $color2;
+                }
+            }
+        }
+    }
 }
 main {
     width: 100%;
@@ -32,14 +72,36 @@ aside {
     padding: 5px;
     box-sizing: border-box;
 }
+form,
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    input,
+    select,
+    button {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 7px;
+        margin: 2px;
+        border: none;
+        border-radius: 3px;
+    }
+    input,
+    select {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
 footer {
     width: 100%;
     box-sizing: border-box;
     text-align: center;
+    left: 0;
     bottom: 0;
 }
 .row {
     display: flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -47,20 +109,39 @@ footer {
     display: flex;
     flex: 1;
     flex-direction: column;
+    margin: 2px;
 }
 .center {
     text-align: center;
 }
 .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 13px;
-    background-color: white;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    background-color: $backGround0;
     box-shadow: $box-shadow;
+    .card-header {
+        i,
+        img {
+            font-size: 3.5rem;
+            width: 100%;
+        }
+    }
+    .card-body {
+        align-items: center;
+    }
+    .btn-card {
+        display: flex;
+        color: $color4;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
 ul {
     list-style-type: none;
     padding: 3px;
@@ -80,6 +161,21 @@ ul {
 .p-5 {
     padding: 24px;
 }
+#divImg {
+    width: 250px;
+}
+#txtNav,
+#fun {
+    color: $backGround0;
+    font-weight: 600;
+
+    padding: 5px;
+}
+.justify-content-space-between {
+    display: flex;
+    justify-content: space-around;
+}
+@import "welcome";
 @import "basic";
 @import "gestao";
 @import "recipe";

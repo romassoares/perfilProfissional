@@ -1,0 +1,267 @@
+// * {
+//     box-sizing: border-box;
+// }
+
+// #squares li {
+//     position: relative;
+//     display: block;
+//     border-radius: 5px;
+//     background-color: rgba(255, 255, 255, 0.15);
+//     animation: squares 3s infinite alternate;
+// }
+
+// @keyframes squares {
+//     from {
+//         transform: translateY(0);
+//         opacity: 0;
+//     }
+//     50% {
+//         opacity: 0.5;
+//     }
+//     to {
+//         transform: translateY(-1000px) rotate(980deg);
+//         opacity: 0;
+//     }
+// }
+
+// body {
+//     color: var(--e);
+// }
+// /* *********************************************************************************** */
+// .my {
+//     text-align: center;
+// }
+// .my #divImg {
+//     width: 150px;
+//     height: auto;
+// }
+// .my .contact {
+//     padding: 5px;
+// }
+// .my #txtNav {
+//     text-align: center;
+//     font-size: 21px;
+// }
+// .my #fun {
+//     font-size: 17px;
+//     text-align: center;
+// }
+
+// .card:hover {
+//     animation: trem 300ms;
+//     animation-delay: 0.1s;
+// }
+// @keyframes trem {
+//     0% {
+//         transform: translateY(0);
+//     }
+//     25% {
+//         transform: translateY(-15%);
+//         transform: rotate3d(0, 1, 0, 30deg);
+//     }
+//     50% {
+//         transform: translateY(15%);
+//     }
+//     100% {
+//         transform: translateY(0);
+//     }
+// }
+// /* *********************************************************************************** */
+// .calculator {
+//     text-align: center;
+//     background-color: var(--e);
+// }
+// .calculator .bodyCalculator {
+//     display: flex;
+//     flex-wrap: wrap;
+//     background-color: var(--e);
+// }
+// .calculator label {
+//     font-size: 17px;
+//     text-align: center;
+//     color: var(--d);
+//     background-color: var(--e);
+//     padding: 5px;
+// }
+// .calculator #result {
+//     font-size: 20px;
+//     color: yellowgreen;
+// }
+// .calculator .bodyCalculator .inputCalc {
+//     margin: 3px;
+//     font-size: 17px;
+//     width: calc(50% - 8px);
+//     padding: 5px;
+//     border: none;
+//     border-radius: 5px;
+//     background-color: white;
+// }
+// .calculator .bodyCalculator .btn {
+//     background-color: var(--d);
+//     font-size: 17px;
+//     color: var(--e);
+//     padding: 5px;
+//     border: none;
+//     margin: 3px;
+//     border-radius: 5px;
+// }
+// .calculator .bodyCalculator .btn:hover {
+//     color: #9c9b9b;
+// }
+// /* ************************************************************************************ */
+// .fin {
+//     text-align: center;
+//     padding: 10px;
+//     margin: 20px;
+//     background: var(--e);
+// }
+// .fin .btnFin:hover {
+//     background: var(--c);
+//     color: #9c9b9b;
+//     cursor: pointer;
+// }
+// .fin .btnFin {
+//     text-align: center;
+//     font-size: 17px;
+//     border: none;
+//     border-radius: 5px;
+//     padding: 5px;
+//     background: var(--d);
+//     color: var(--e);
+// }
+// /* ************************************************************************************ */
+// nav {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: var(--c);
+//     padding: 0 10px;
+//     border-bottom: solid 0.5px var(--e);
+// }
+// nav .logo {
+//     font-size: 35px;
+//     padding-left: 30px;
+//     font-weight: bold;
+// }
+// // nav ul {
+// //     float: left;
+// //     margin-right: 20px;
+// // }
+// nav li {
+//     display: inline-block;
+//     margin: 0 5px;
+//     margin: 30px 10px;
+// }
+// nav li a {
+//     text-decoration: none;
+//     font-size: 17px;
+//     font-weight: 600;
+//     text-transform: uppercase;
+//     padding: 5px;
+//     border-radius: 5px;
+//     background: var(--c);
+//     color: var(--e);
+//     transition: border-bottom 0.4s;
+// }
+// nav li a.active,
+// a:hover {
+//     background: var(--e);
+//     color: var(--c);
+//     border-bottom: 6px solid var(--b);
+// }
+// .checkbtn {
+//     font-size: 30px;
+//     float: right;
+//     line-height: 75px;
+//     margin-right: 40px;
+//     cursor: pointer;
+//     display: none;
+// }
+// #check {
+//     display: none;
+// }
+// @media (max-width: 958px) {
+//     nav .logo {
+//         font-size: 30px;
+//         padding-left: 50px;
+//     }
+//     .row {
+//         flex-direction: column;
+//     }
+//     .card {
+//         width: 100%;
+//     }
+//     .skillWithTechnologies {
+//         display: block;
+//     }
+// }
+// @media (max-width: 858px) {
+//     .checkbtn {
+//         display: block;
+//     }
+
+//     ul {
+//         position: fixed;
+//         background: var(--c);
+//         top: 0px;
+//         left: -100vw;
+//         text-align: center;
+//         transition: all 0.5s;
+//     }
+//     nav ul li {
+//         display: block;
+//         line-height: 30px;
+//     }
+//     nav ul li a {
+//         font-size: 12px;
+//     }
+//     nav li a:hover,
+//     a.active {
+//         background: var(--e);
+//     }
+//     #check:checked ~ ul {
+//         left: 0;
+//     }
+//     .row {
+//         flex-direction: column;
+//     }
+//     .card {
+//         width: 100%;
+//     }
+// }
+// .row {
+//     display: flex;
+//     flex-direction: row;
+// }
+// .container .title {
+//     display: flex;
+//     justify-content: center;
+// }
+// .container .text-about {
+//     text-align: center;
+//     margin-top: 15px;
+//     font-size: 17px;
+// }
+// .card {
+//     display: flex;
+//     flex-direction: column;
+//     max-width: 250px;
+//     // height: 300px;
+//     // padding: 5px;
+//     margin: 5px;
+//     // border: 1px solid violet;
+// }
+// .card .card-img {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 40px;
+// }
+// .card .card-img i {
+//     font-size: 59px;
+//     color: black;
+// }
+// .card .card-body {
+//     font-size: 17px;
+//     text-align: center;
+//     margin-top: 10px;
+// }

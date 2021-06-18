@@ -12,52 +12,65 @@
 
     <body>
         <header>
-            <nav class="nav-gestao">
-                <a onclick='window.history.back();' class="p-3">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-                <h2>Controle de despesas</h2>
+            <nav>
+                <div class="hamburger">
+                    <a onclick='window.history.back();' class="p-3">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="menu-items">
+                    <h2>Controle de despesas</h2>
+                </div>
             </nav>
         </header>
-        <main class="container">
-            <div class="row">
-                <div class="saldo">
-                    <h4>Saldo atual</h4>
-                    <h1 id="balance" class="balance">R$ 0.00</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <div class="col center">
-                        <h4>Receitas</h4>
-                        <p id="money-plus" class="money plus">+ R$0.00</p>
+        <main>
+            <div class="container">
+                <section>
+                    <div class="row">
+                        <div class="saldo">
+                            <h4>Saldo atual</h4>
+                            <h1 id="balance" class="balance">R$ 0.00</h1>
+                        </div>
                     </div>
-                    <div class="col center">
-                        <h4>Despesas</h4>
-                        <p id="money-minus" class="money minus">- R$0.00</p>
+                    <div class="row">
+                        <div class="card">
+                            <div class="row justify-content-space-between">
+                                <div class="col center p-5">
+                                    <h4>Receitas</h4>
+                                    <p id="money-plus" class="money plus">+ R$0.00</p>
+                                </div>
+                                <div class="col center  p-5">
+                                    <h4>Despesas</h4>
+                                    <p id="money-minus" class="money minus">- R$0.00</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div>
-                <h3 class="title">Transações</h3>
-                <ul id="transactions" class="transactions">
-                </ul>
-            </div>
-            <div class="center">
-                <h3 class="title">Adicionar transação</h3>
-                <form id="form">
-                    <div class="form-control">
-                        <label for="text">Nome</label>
-                        <input autofocus type="text" id="text" placeholder="Nome da transação" />
+                </section>
+                <section>
+                    <div class="row p-4">
+                        <h3 class="title">Transações</h3>
                     </div>
-                    <div class="form-control">
-                        <label for="amount">Valor <br />
-                            <small>(negativo -> despesas, positivo -> receitas)</small>
-                        </label>
-                        <input type="number" id="amount" placeholder="Valor da transação" />
+                    <div class="row">
+                        <ul id="transactions" class="transactions">
+                        </ul>
                     </div>
-                    <button class="btn">Adicionar</button>
-                </form>
+                    <div class="row p-4">
+                        <h3 class="title">Adicionar transação</h3>
+                        <form id="form p-3">
+                            <div class="row">
+                                <label for="text">Nome</label>
+                                <input autofocus type="text" id="text" placeholder="Nome da transação" />
+
+                                <label for="amount">Valor <br />
+                                    <small>(negativo -> despesas, positivo -> receitas)</small>
+                                </label>
+                                <input type="number" id="amount" placeholder="Valor da transação" />
+                            </div>
+                            <button class="btn">Adicionar</button>
+                        </form>
+                    </div>
+                </section>
             </div>
         </main>
     </body>
