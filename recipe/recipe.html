@@ -12,57 +12,71 @@
 
     <body>
         <header>
-            <nav class=" p-3">
-                <a onclick='window.history.back();'>
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-                <h2>Shopping list</h2>
+            <nav>
+                <div class="hamburger">
+                    <a onclick='window.history.back();'>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="menu-items">
+                    <h2>Shopping list</h2>
+                </div>
             </nav>
         </header>
 
         <main>
-            <div class="body">
-                <div class="row p-3">
-                    <div class="col">
-                        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header p-3">
                             <div class="title">list Name </div>
                         </div>
-                        <form id="productForm">
-                            <div class="form-control">
-                                <label for="">Description</label>
-                                <input type="text" id="productInput">
-                            </div>
-                            <button>to save</button>
-                        </form>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="title">Items</div>
+                        <div class="card-body">
+                            <form id="productForm">
+                                <div class="form-control">
+                                    <label for="">Description</label>
+                                    <input type="text" id="productInput">
+                                    <button>to save</button>
+                                </div>
+                            </form>
                         </div>
-                        <form id="ingredients">
-                            <div class="form-control">
-                                <label for="">Name</label>
-                                <input type="text" id="nameInput">
-                            </div>
-                            <div class="form-control">
-                                <label for="">Price</label>
-                                <input type="text" id="priceInput">
-                            </div>
-                            <div class="form-control">
-                                <label for="">Amount</label>
-                                <input type="text" id="amountInput">
-                            </div>
-                            <button>to save</button>
-                        </form>
                     </div>
                 </div>
-                <div class="col p-3">
-                    <div class="col">
-                        <div id="tdReport"></div>
-                        <div id="trHead"></div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header p-3">
+                            <div class="title">Items</div>
+                        </div>
+                        <div class="card-body">
+                            <form id="ingredients">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="">Name</label>
+                                        <input type="text" id="nameInput">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Price</label>
+                                        <input type="text" id="priceInput">
+                                    </div>
+                                    <div class="col">
+                                        <label for="">Amount</label>
+                                        <input type="text" id="amountInput">
+                                    </div>
+                                </div>
+                                <button>to save</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col">
-                        <div class="title">list of items</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <p id="trHead"></p>
+                        <p id="tdReport"></p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class=" title">list of items</div>
+                        </div>
                         <table class="table-responsive">
                             <tr>
                                 <th>#</th>
@@ -78,8 +92,8 @@
                 </div>
             </div>
         </main>
-        <footer class="p-3">
-            <p>@copyright</p>
+        <footer>
+            @copyright
         </footer>
     </body>
     <script src="functions.js"></script>

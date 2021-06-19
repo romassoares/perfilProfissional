@@ -1,4 +1,10 @@
 .table-responsive {
     width: 100%;
     text-align: center;
+    td {
+        padding: 4px;
+    }
+    tr:nth-last-child(2n) {
+        background-color: #e0e0e0;
+    }
 }

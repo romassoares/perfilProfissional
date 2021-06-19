@@ -24,7 +24,6 @@ body {
     flex-direction: column;
     font-size: 1rem;
     background-color: $backGround1;
-    // height: 100vh;
 }
 nav {
     display: flex;
@@ -77,28 +76,28 @@ aside {
     width: 30%;
     padding: 5px;
     box-sizing: border-box;
-    // border: $color5 solid;
 }
 form,
 .form {
     display: flex;
     flex-direction: column;
+    flex: 1;
     width: 100%;
+    box-sizing: border-box;
     input,
     select,
     button {
         box-sizing: border-box;
-        width: 100%;
+        flex: 1;
         padding: 7px;
         margin: 2px;
-        border: none;
         border-radius: 3px;
         font-weight: 500;
         font-size: 1.1rem;
+        border: 1px $backGround2 solid;
     }
-    input,
-    select {
-        background-color: rgba(0, 0, 0, 0.1);
+    button {
+        background-color: $color1;
     }
 }
 footer {
@@ -158,28 +157,6 @@ footer {
         color: $color4;
     }
 }
-.animateTrem {
-    &:hover {
-        animation: trem 300ms;
-        animation-delay: 0.1s;
-    }
-    @keyframes trem {
-        0% {
-            transform: translateY(0);
-        }
-        25% {
-            transform: translateY(-15%);
-            transform: rotate3d(0, 1, 0, 30deg);
-        }
-        50% {
-            transform: translateY(15%);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-}
-
 ul {
     list-style-type: none;
     padding: 3px;
@@ -213,28 +190,14 @@ ul {
     display: flex;
     justify-content: space-around;
 }
-#squares li {
-    position: absolute;
-    display: block;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.15);
-    animation: squares 3s infinite alternate;
+.title {
+    font-size: 1.5rem;
 }
-
-@keyframes squares {
-    from {
-        transform: translateY(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    to {
-        transform: translateY(-1000px) rotate(980deg);
-        opacity: 0;
-    }
+.fab,
+.far {
+    font-size: 1.4rem;
 }
+@import "mobile";
 @import "welcome";
-@import "basic";
 @import "gestao";
 @import "recipe";
