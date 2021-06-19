@@ -3,6 +3,9 @@ function calc(one, two, op) {
     let y = parseFloat(two.value)
     let p = op.value
     const result = document.querySelector('#result')
+    result.style.padding = "10px"
+    result.style.color = "#8b7ceb"
+    result.style.fontWeight = "bold"
     if (result) {
         if (p == '+') {
             let soma = x + y

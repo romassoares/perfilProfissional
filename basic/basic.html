@@ -23,149 +23,136 @@
   <body>
     <header>
       <nav>
-        <a onclick='window.history.back()' class="p-3">
-          <i class="fas fa-arrow-left"></i>
-        </a>
-        <h2>Page Profile</h2>
+        <div class="hamburger">
+          <a onclick='window.history.back()' class="p-3">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="menu-items">
+          <h2>Page Profile</h2>
+        </div>
       </nav>
     </header>
-    <div class="body backgroundColor">
+    <div class="row">
+
+
       <aside>
-        <div class="userGit">
-          <div class="divImg">
+        <div class="card">
+          <div class="card-header">
             <img id="divImg" alt="">
           </div>
-          <div id="txtNav"></div>
-          <strong>
-            <p id="fun"></p>
-          </strong>
-        </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <p id="txtNav"></p>
+                <p id="fun"></p>
+              </div>
+            </div>
+            <div class="row p-4">
+              <p class="title title-background">Contact</p>
+            </div>
+            <div class="row">
+              <div class="col center">
+                <a href="https://wa.me/5586981332085" target=" _blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+              <div class="col center">
+                <a href="www.linkedin.com/in/romario-soares-5a1030193" target="blank">
+                  <i class=" fab fa-linkedin"></i>
+                </a>
+              </div>
+              <div class="col center">
+                <a href="mailto:anotonioromas@gmail.com" target="blank">
+                  <i class="far fa-envelope"></i>
+                </a>
+              </div>
+              <div class="col center">
+                <a href="https://github.com/romassoares" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
 
-        <div class="row">
-          <p class="title title-background">Contact</p>
-        </div>
-        <div class="row">
-          <div class="items-aside">
-            <a href="https://wa.me/5586981332085" target=" _blank">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-          <div class="items-aside">
-            <a href="www.linkedin.com/in/romario-soares-5a1030193" target="blank">
-              <i class=" fab fa-linkedin"></i>
-            </a>
-          </div>
-          <div class="items-aside">
-            <a href="mailto:anotonioromas@gmail.com" target="blank">
-              <i class="far fa-envelope"></i>
-            </a>
-          </div>
-          <div class="items-aside">
-            <a href="https://github.com/romassoares" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <p class="title title-background">Skills</p>
-        </div>
-        <div class="row">
-          <div class="items-aside">
-            <i class="fab fa-php"></i>
-          </div>
-          <div class="items-aside">
-            <i class="fab fa-js"></i>
-          </div>
-          <div class="items-aside">
-            <i class="fab fa-html5"></i>
-          </div>
-          <div class="items-aside">
-            <i class="fab fa-css3-alt"></i>
-          </div>
-          <div class="items-aside">
-            <i class="fab fa-react"></i>
+            <div class="row  p-4">
+              <p class="title">Skills</p>
+            </div>
+            <div class="row  p-2">
+              <div class="col center">
+                <i class="fab fa-php"></i>
+              </div>
+              <div class="col center">
+                <i class="fab fa-js"></i>
+              </div>
+              <div class="col center">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="col center">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <div class="col center">
+                <i class="fab fa-react"></i>
+              </div>
+            </div>
           </div>
         </div>
       </aside>
-
       <main>
-        <div class="row">
-          <p class="title title-background">formação</p>
-        </div>
-        <div class="row">
-          <div class="col p-5">
-            <p><strong>Instituição: </strong> Bacharel em Sistemas de Informação</p>
-            <p>
-              <strong>Cargo:</strong> Universidade Federal do Piauí - UFPI
-            </p>
-            <p>
-              <strong>Período:</strong> 02/02/2021
-            </p>
+        <div class="card">
+          <div class="row p-4">
+            <p class="title title-background">formação</p>
           </div>
-          <div class="col p-5">
-            <p><strong>Instituição: </strong> Bacharel em Ciências Contábeis</p>
-            <p>
-              <strong>Cargo:</strong> Faculdade Cristo Reis
-            </p>
-            <p>
-              <strong>Período:</strong> 29/12/2014
-            </p>
+          <div class="row p-4">
+            <div class="col p-1">
+              <p><strong>Instituição: </strong> Bacharel em Sistemas de Informação</p>
+              <p><strong>Cargo:</strong> Universidade Federal do Piauí - UFPI</p>
+              <p><strong>Período:</strong> 02/02/2021</p>
+            </div>
+            <div class="col p-1">
+              <p><strong>Instituição: </strong> Bacharel em Ciências Contábeis</p>
+              <p><strong>Cargo:</strong> Faculdade Cristo Reis</p>
+              <p><strong>Período:</strong> 29/12/2014</p>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <p class="title title-background">Experiências</p>
-        </div>
-        <div class="row">
-          <div class="col p-5">
-            <p> <strong>Empresa: </strong>Vikstar Center</p>
-            <p> <strong>Cargo:</strong> Operador de Telemarketing
-            </p>
-            <p>
-              <strong>Período:</strong> De 22-09-2014 a 26-06-2015
-            </p>
+          <div class="row p-4">
+            <p class="title title-background">Experiências</p>
           </div>
-          <div class="col p-5">
-            <p><strong>Empresa: </strong> Agrovila</p>
-            <p>
-              <strong>Cargo:</strong> Serviços Gerais
-            </p>
-            <p>
-              <strong>Período:</strong> 1 ano
-            </p>
+          <div class="row p-4">
+            <div class="col p-1">
+              <p> <strong>Empresa: </strong>Vikstar Center</p>
+              <p> <strong>Cargo:</strong> Operador de Telemarketing</p>
+              <p><strong>Período:</strong> De 22-09-2014 a 26-06-2015</p>
+            </div>
+            <div class="col p-1">
+              <p><strong>Empresa: </strong> Agrovila</p>
+              <p><strong>Cargo:</strong> Serviços Gerais </p>
+              <p><strong>Período:</strong> 1 ano</p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col p-5">
-            <p> <strong>Empresa: </strong>Cactos Coders</p>
-            <p> <strong>Cargo: </strong> Desenvolvedor web
-            </p>
-            <p>
-              <strong>Período:</strong> Desde 01-11-2017
-            </p>
+          <div class="row p-4">
+            <div class="col p-1">
+              <p> <strong>Empresa: </strong>Cactos Coders</p>
+              <p> <strong>Cargo: </strong> Desenvolvedor web</p>
+              <p><strong>Período:</strong> Desde 01-11-2017</p>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <p class="title title-background">Cursos</p>
-        </div>
-        <div class="row">
-          <div class="col p-5">
-            <p><strong>Instituição: </strong> Instituto Federal do Piauí - IFPI</p>
-            <p>
-              <strong>Curso:</strong> Técnico em comércio
-            </p>
-            <p>
-              <strong>Período:</strong> 1 ano e meio
-            </p>
+          <div class="row p-4">
+            <p class="title title-background">Cursos</p>
+          </div>
+          <div class="row p-4">
+            <div class="col p-1">
+              <p><strong>Instituição: </strong> Instituto Federal do Piauí - IFPI</p>
+              <p> <strong>Curso:</strong> Técnico em comércio </p>
+              <p> <strong>Período:</strong> 1 ano e meio </p>
+            </div>
           </div>
         </div>
-
       </main>
     </div>
-    <footer class="p-3">
-      <p>@copyright</p>
+    <footer>
+      @copyright
     </footer>
   </body>
 

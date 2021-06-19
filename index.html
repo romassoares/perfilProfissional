@@ -36,8 +36,8 @@
         </header>
         <main>
             <div class="row">
-                <div class="card" style="background-image:url('./backgroundImage.jpg')">
-                    <div class="card-header">
+                <div class="col" style="background-image:url('./backgroundImage.jpg')">
+                    <div class="card-header center">
                         <img id="divImg">
                     </div>
                     <div class="card-body center" style="background-color: rgba(0, 0, 0, 0.3);width: 100%">
@@ -48,7 +48,7 @@
             </div>
             <section>
                 <div class="row">
-                    <div class="col p-3 card ">
+                    <div class="col p-3 card animateTrem ">
                         <div class="card-header p-3">
                             <label class="btn-card" for="">Calculator</label>
                         </div>
@@ -64,29 +64,29 @@
                                 </select>
                                 <button class="btn" onclick="calc(one,two,op)">Calculate</button>
                             </div>
+                            <div id="result"></div>
                         </div>
-                        <div id="result"></div>
                     </div>
-                    <div class="col p-3 card" onClick="window.location = 'gestao/index.html'">
+                    <div class="col p-3 card animateTrem" onClick="window.location = 'gestao/index.html'">
                         <a class="btn-card"> Financeiro</a>
                     </div>
-                    <div class="col p-3 card" onClick="window.location = 'basic/basic.html'">
+                    <div class="col p-3 card animateTrem" onClick="window.location = 'basic/basic.html'">
                         <div class="card-header">
                             <a class="btn-card">Page Profile </a>
                         </div>
                     </div>
-                    <div class="col p-3 card" onClick="window.location = 'recipe/recipe.html'">
+                    <div class="col p-3 card animateTrem" onClick="window.location = 'recipe/recipe.html'">
                         <a class="btn-card">Recipe </a>
                     </div>
                 </div>
             </section>
         </main>
+        <ul id="squares">
+        </ul>
         <footer>
             footer
         </footer>
-        <ul id="squares">
-        </ul>
     </body>
-    <script src="cards.js"></script>
+    <script src="skills.js"></script>
 
 </html>

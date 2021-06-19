@@ -2,28 +2,6 @@
 //     box-sizing: border-box;
 // }
 
-// #squares li {
-//     position: relative;
-//     display: block;
-//     border-radius: 5px;
-//     background-color: rgba(255, 255, 255, 0.15);
-//     animation: squares 3s infinite alternate;
-// }
-
-// @keyframes squares {
-//     from {
-//         transform: translateY(0);
-//         opacity: 0;
-//     }
-//     50% {
-//         opacity: 0.5;
-//     }
-//     to {
-//         transform: translateY(-1000px) rotate(980deg);
-//         opacity: 0;
-//     }
-// }
-
 // body {
 //     color: var(--e);
 // }
@@ -47,25 +25,6 @@
 //     text-align: center;
 // }
 
-// .card:hover {
-//     animation: trem 300ms;
-//     animation-delay: 0.1s;
-// }
-// @keyframes trem {
-//     0% {
-//         transform: translateY(0);
-//     }
-//     25% {
-//         transform: translateY(-15%);
-//         transform: rotate3d(0, 1, 0, 30deg);
-//     }
-//     50% {
-//         transform: translateY(15%);
-//     }
-//     100% {
-//         transform: translateY(0);
-//     }
-// }
 // /* *********************************************************************************** */
 // .calculator {
 //     text-align: center;
